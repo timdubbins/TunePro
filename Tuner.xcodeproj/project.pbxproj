@@ -85,14 +85,9 @@
 				22CDC55028675E92009F4DA6 /* Info.plist */,
 				221114C428671CCF002FC98C /* TunerApp.swift */,
 				221114DE28671D87002FC98C /* Audio.swift */,
-				221114D528671D5F002FC98C /* BezelView.swift */,
-				22CDC55B2867ACC1009F4DA6 /* FaceView.swift */,
-				221114D728671D60002FC98C /* TunerModel.swift */,
-				221114D428671D5F002FC98C /* TunerView.swift */,
-				221114D328671D5F002FC98C /* TunerViewModel.swift */,
-				22CDC5532867A6AC009F4DA6 /* VisualizerView.swift */,
-				22CDC56C2867DA68009F4DA6 /* WaveShape.swift */,
-				22CDC56A2867D92F009F4DA6 /* WedgeShape.swift */,
+				2276CE382868D15600D7079C /* Views */,
+				2276CE392868D16900D7079C /* ViewModels */,
+				2276CE372868D13F00D7079C /* Models */,
 				221114C828671CD1002FC98C /* Assets.xcassets */,
 				222ABC98286732340050EDB1 /* Extensions */,
 				221114CA28671CD1002FC98C /* Preview Content */,
@@ -117,6 +112,35 @@
 				222ABCA1286732340050EDB1 /* CGPoint-Midpoint.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2276CE372868D13F00D7079C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				221114D728671D60002FC98C /* TunerModel.swift */,
+				22CDC56C2867DA68009F4DA6 /* WaveShape.swift */,
+				22CDC56A2867D92F009F4DA6 /* WedgeShape.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2276CE382868D15600D7079C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				221114D528671D5F002FC98C /* BezelView.swift */,
+				22CDC55B2867ACC1009F4DA6 /* FaceView.swift */,
+				221114D428671D5F002FC98C /* TunerView.swift */,
+				22CDC5532867A6AC009F4DA6 /* VisualizerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2276CE392868D16900D7079C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				221114D328671D5F002FC98C /* TunerViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
