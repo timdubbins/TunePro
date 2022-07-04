@@ -22,13 +22,13 @@ struct TunerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TunerView()
+            SplashView()
                 .preferredColorScheme(.dark)
                 .onReceive(
                     NotificationCenter.default.publisher(for: AVAudioSession.routeChangeNotification),
                     perform: audio.handleRouteChange)
                 .onReceive(
-                    // Automatically save when we detect that we are no longer
+                    // Automatically pause when we detect that we are no longer
                     // the foreground app. Use this rather than the scene phase
                     // API so we can port to macOS, where scene phase cannot
                     // detect our app losing focus as of macOS 11.1.
