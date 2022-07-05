@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct TunerApp: App {
     let audio = Audio.sharedInstance
-    
+
     init() {
         #if DEBUG
         if CommandLine.arguments.contains("enable-testing") {
@@ -48,6 +48,3 @@ struct TunerApp: App {
         try? audio.engine.start()
     }
 }
-
-
-

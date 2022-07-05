@@ -26,7 +26,6 @@ private struct SizePreferenceKey: PreferenceKey {
     static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
 }
 
-
 private struct ReadSize: View {
     @State private var size = CGSize()
 

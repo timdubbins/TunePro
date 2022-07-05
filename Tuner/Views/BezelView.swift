@@ -9,23 +9,23 @@ import SwiftUI
 
 struct BezelView: View {
     let vm: Tuner.Bezel
-    
+
     var body: some View {
-            ZStack {            
+        ZStack {
             WedgeShape(wedge: Wedge.topWedge)
                 .foregroundColor(vm.state == .tuned ? Color.green : Color.white)
-            
+
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
                     .stroke(Color.white)
                     .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
-            
+
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
                     .foregroundColor(vm.state == .tuned ? Color.green : getColor(wedgeNumber))
-                .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
+                    .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
         }

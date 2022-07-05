@@ -48,6 +48,7 @@
 		222ABCA1286732340050EDB1 /* CGPoint-Midpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint-Midpoint.swift"; sourceTree = "<group>"; };
 		2283F773287200D900783B9D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2283F77528720D4700783B9D /* TuningForkShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuningForkShape.swift; sourceTree = "<group>"; };
+		22B620E72874C73400D70D7F /* TunerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CDC55028675E92009F4DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		22CDC5532867A6AC009F4DA6 /* VisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerView.swift; sourceTree = "<group>"; };
 		22CDC55B2867ACC1009F4DA6 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
@@ -66,6 +67,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22B620E42874C73400D70D7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				221114C328671CCF002FC98C /* Tuner */,
+				22B620E82874C73400D70D7F /* TunerTests */,
 				221114C228671CCF002FC98C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				221114C128671CCF002FC98C /* Tuner.app */,
+				22B620E72874C73400D70D7F /* TunerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +162,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		22B620E82874C73400D70D7F /* TunerTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TunerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +194,23 @@
 			productReference = 221114C128671CCF002FC98C /* Tuner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		22B620E62874C73400D70D7F /* TunerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22B620ED2874C73400D70D7F /* Build configuration list for PBXNativeTarget "TunerTests" */;
+			buildPhases = (
+				22B620E32874C73400D70D7F /* Sources */,
+				22B620E42874C73400D70D7F /* Frameworks */,
+				22B620E52874C73400D70D7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TunerTests;
+			productName = TunerTests;
+			productReference = 22B620E72874C73400D70D7F /* TunerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +222,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					221114C028671CCF002FC98C = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					22B620E62874C73400D70D7F = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
@@ -211,6 +248,7 @@
 			projectRoot = "";
 			targets = (
 				221114C028671CCF002FC98C /* Tuner */,
+				22B620E62874C73400D70D7F /* TunerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +260,13 @@
 			files = (
 				221114CC28671CD1002FC98C /* Preview Assets.xcassets in Resources */,
 				221114C928671CD1002FC98C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B620E52874C73400D70D7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +294,13 @@
 				221114C528671CCF002FC98C /* TunerApp.swift in Sources */,
 				22CDC56D2867DA68009F4DA6 /* WaveShape.swift in Sources */,
 				22CDC55C2867ACC1009F4DA6 /* FaceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B620E32874C73400D70D7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +483,40 @@
 			};
 			name = Release;
 		};
+		22B620EB2874C73400D70D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q36UADFSK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = timdubbins.TunerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		22B620EC2874C73400D70D7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q36UADFSK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = timdubbins.TunerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +534,15 @@
 			buildConfigurations = (
 				221114D028671CD1002FC98C /* Debug */,
 				221114D128671CD1002FC98C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22B620ED2874C73400D70D7F /* Build configuration list for PBXNativeTarget "TunerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22B620EB2874C73400D70D7F /* Debug */,
+				22B620EC2874C73400D70D7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

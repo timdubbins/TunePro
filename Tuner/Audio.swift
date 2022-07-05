@@ -36,7 +36,7 @@ class Audio: ObservableObject {
     }()
 
     /// A tuple that holds the current amplitude and frequency of the pitch tap.
-    @Published var pitchTapData: (amplitude: Float, frequency: Float) = (0,0) 
+    @Published var pitchTapData: (amplitude: Float, frequency: Float) = (0, 0)
 
     /// Whether or not a headphone jack is detected.
     @Published var headphonesConnected: Bool = false

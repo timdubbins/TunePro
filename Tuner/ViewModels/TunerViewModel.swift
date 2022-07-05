@@ -35,8 +35,7 @@ extension TunerView {
 
             cancellable = audio.$pitchTapData
                 .receive(on: DispatchQueue.main)
-                .sink() {
-                    [weak self] in
+                .sink { [weak self] in
                     guard let self = self else { return }
 
                     self.updateTuner($0.amplitude, $0.frequency)
