@@ -19,6 +19,7 @@ class Tuner {
         case tuned
         case sharp
         case flat
+        case clear
     }
 
     /// The data model for the tuner face.
@@ -31,6 +32,8 @@ class Tuner {
         var symbol: String = " "
         /// The current octave.
         var octave: String = "4"
+        /// Whether or not the symbol has been changed.
+        var showingSymbol: Bool = false
     }
 
     /// The data model for the tuner bezel.
@@ -72,4 +75,13 @@ class Tuner {
 
     /// The current state of the tuner.
     var state: Tuner.State = .tuned
+}
+
+extension Tuner {
+    static let faceExample = Tuner.Face(
+        frequency: "261.6",
+        note: "C",
+        symbol: " ",
+        octave: "4"
+    )
 }

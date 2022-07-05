@@ -94,8 +94,8 @@
 				2276CE382868D15600D7079C /* Views */,
 				2276CE392868D16900D7079C /* ViewModels */,
 				2276CE372868D13F00D7079C /* Models */,
-				221114C828671CD1002FC98C /* Assets.xcassets */,
 				222ABC98286732340050EDB1 /* Extensions */,
+				221114C828671CD1002FC98C /* Assets.xcassets */,
 				221114CA28671CD1002FC98C /* Preview Content */,
 			);
 			path = Tuner;

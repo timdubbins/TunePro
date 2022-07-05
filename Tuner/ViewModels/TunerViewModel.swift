@@ -53,13 +53,24 @@ extension TunerView {
 
         /// Toggles the symbol between sharp and flat.
         func symbolToggle() {
+            guard face.showingSymbol == false else { return }
+
             if tuner.symbol == .sharp {
                 tuner.symbol = .flat
             } else {
                 tuner.symbol = .sharp
             }
-            // Displays the change in the view immediately.
+
+            stopPitchTap()
+            visualizer.amplitude = 0
+            bezel.state = .clear
             face.symbol = tuner.symbol.rawValue
+            face.showingSymbol = true
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.startPitchTap()
+                self.face.showingSymbol = false
+            }
         }
 
         /// Updates the model with data from the pitch tap.

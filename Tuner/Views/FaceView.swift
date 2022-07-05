@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FaceView: View {
-    let model: Tuner.Face
+    let vm: Tuner.Face
 
     @State private var size = CGSize()
 
-    var body: some View {
+    var front: some View {
         HStack {
             VStack(alignment: .trailing) {
-                Text(model.frequency)
+                Text(vm.frequency)
                     .fontWeight(.semibold)
 
                 Text("Hz")
@@ -23,23 +23,45 @@ struct FaceView: View {
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
 
-            Text(model.note)
+            Text(vm.note)
                 .fontWeight(.semibold)
                 .font(.system(size: size.width * 1.4 / 3))
 
             VStack(alignment: .leading) {
-                Text(model.symbol)
+                Text(vm.symbol)
                     .fontWeight(.semibold)
                     .font(.system(size: size.width * 1.2 / 5))
 
-                Text(model.octave)
+                Text(vm.octave)
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+    }
+
+    var back: some View {
+        Text(vm.symbol)
+            .fontWeight(.semibold)
+            .font(.system(size: size.width * 1.4 / 3))
+    }
+
+    var body: some View {
+        FlipView(
+            isFlipped: vm.showingSymbol,
+            front: { front },
+            back: { back }
+        )
         .foregroundColor(.white)
+        .animation(.linear, value: vm.showingSymbol)
         .readSize { size = $0 }
     }
 
-    init(_ model: Tuner.Face) { self.model = model }
+    init(_ viewModel: Tuner.Face) { vm = viewModel }
+}
+
+struct FaceViewPreview: PreviewProvider {
+    static var previews: some View {
+        FaceView(Tuner.faceExample)
+            .background(Color(.black))
+    }
 }
