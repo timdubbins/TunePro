@@ -11,6 +11,8 @@ import SwiftUI
 @main
 struct TunerApp: App {
     let audio = Audio.sharedInstance
+    let data = Data()
+    let theme: ThemeManager
 
     init() {
         #if DEBUG
@@ -18,11 +20,19 @@ struct TunerApp: App {
             UIView.setAnimationsEnabled(false)
         }
         #endif
+
+        theme = ThemeManager(data: data)
     }
 
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            SplashView(data: data)
+                .onTapGesture {
+                    withAnimation(.linear(duration: 0.3)) {
+                        theme.swapTheme()
+                    }
+                }
+                .environmentObject(theme)
                 .preferredColorScheme(.dark)
                 .onReceive(
                     NotificationCenter.default.publisher(for: AVAudioSession.routeChangeNotification),

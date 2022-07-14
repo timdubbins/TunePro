@@ -16,6 +16,8 @@
 		221114DD28671D60002FC98C /* TunerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221114D728671D60002FC98C /* TunerModel.swift */; };
 		221114DF28671D87002FC98C /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221114DE28671D87002FC98C /* Audio.swift */; };
 		221AFAF728737FF40088B059 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221AFAF628737FF40088B059 /* FlipView.swift */; };
+		221BDFA728760C0F00DD52AF /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221BDFA628760C0F00DD52AF /* ThemeManager.swift */; };
+		221BDFAE28762AB900DD52AF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221BDFAD28762AB900DD52AF /* Data.swift */; };
 		222ABC91286730F50050EDB1 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 222ABC90286730F50050EDB1 /* AudioKit */; };
 		222ABC942867316F0050EDB1 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 222ABC932867316F0050EDB1 /* AudioKitEX */; };
 		222ABC97286731990050EDB1 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 222ABC96286731990050EDB1 /* SoundpipeAudioKit */; };
@@ -29,6 +31,8 @@
 		22CDC55C2867ACC1009F4DA6 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDC55B2867ACC1009F4DA6 /* FaceView.swift */; };
 		22CDC56B2867D92F009F4DA6 /* WedgeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDC56A2867D92F009F4DA6 /* WedgeShape.swift */; };
 		22CDC56D2867DA68009F4DA6 /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDC56C2867DA68009F4DA6 /* WaveShape.swift */; };
+		22DB24832874DC6E006DDD9F /* TunerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB24822874DC6E006DDD9F /* TunerTests.swift */; };
+		22DB24852874E830006DDD9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DB24842874E830006DDD9F /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,8 @@
 		221114D728671D60002FC98C /* TunerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerModel.swift; sourceTree = "<group>"; };
 		221114DE28671D87002FC98C /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		221AFAF628737FF40088B059 /* FlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		221BDFA628760C0F00DD52AF /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		221BDFAD28762AB900DD52AF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		222ABC9A286732340050EDB1 /* View-ReadSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View-ReadSize.swift"; sourceTree = "<group>"; };
 		222ABC9F286732340050EDB1 /* Comparable-Clamped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable-Clamped.swift"; sourceTree = "<group>"; };
 		222ABCA0286732340050EDB1 /* CGPoint-Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint-Rotate.swift"; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		22CDC55B2867ACC1009F4DA6 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		22CDC56A2867D92F009F4DA6 /* WedgeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedgeShape.swift; sourceTree = "<group>"; };
 		22CDC56C2867DA68009F4DA6 /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
+		22DB24822874DC6E006DDD9F /* TunerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerTests.swift; sourceTree = "<group>"; };
+		22DB24842874E830006DDD9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,14 @@
 				22CDC55028675E92009F4DA6 /* Info.plist */,
 				221114C428671CCF002FC98C /* TunerApp.swift */,
 				221114DE28671D87002FC98C /* Audio.swift */,
+				221BDFA628760C0F00DD52AF /* ThemeManager.swift */,
+				221BDFAD28762AB900DD52AF /* Data.swift */,
 				2276CE382868D15600D7079C /* Views */,
 				2276CE392868D16900D7079C /* ViewModels */,
 				2276CE372868D13F00D7079C /* Models */,
 				222ABC98286732340050EDB1 /* Extensions */,
 				221114C828671CD1002FC98C /* Assets.xcassets */,
+				22DB24842874E830006DDD9F /* Colors.xcassets */,
 				221114CA28671CD1002FC98C /* Preview Content */,
 			);
 			path = Tuner;
@@ -165,6 +176,7 @@
 		22B620E82874C73400D70D7F /* TunerTests */ = {
 			isa = PBXGroup;
 			children = (
+				22DB24822874DC6E006DDD9F /* TunerTests.swift */,
 			);
 			path = TunerTests;
 			sourceTree = "<group>";
@@ -259,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22DB24852874E830006DDD9F /* Colors.xcassets in Resources */,
 				221114CC28671CD1002FC98C /* Preview Assets.xcassets in Resources */,
 				221114C928671CD1002FC98C /* Assets.xcassets in Resources */,
 			);
@@ -306,11 +319,14 @@
 				221114DF28671D87002FC98C /* Audio.swift in Sources */,
 				221114D928671D60002FC98C /* TunerViewModel.swift in Sources */,
 				221114DD28671D60002FC98C /* TunerModel.swift in Sources */,
+				221BDFA728760C0F00DD52AF /* ThemeManager.swift in Sources */,
 				222ABCAB286732340050EDB1 /* CGPoint-Rotate.swift in Sources */,
 				2283F77628720D4700783B9D /* TuningForkShape.swift in Sources */,
 				22CDC56B2867D92F009F4DA6 /* WedgeShape.swift in Sources */,
+				22DB24832874DC6E006DDD9F /* TunerTests.swift in Sources */,
 				221114DB28671D60002FC98C /* BezelView.swift in Sources */,
 				222ABCAA286732340050EDB1 /* Comparable-Clamped.swift in Sources */,
+				221BDFAE28762AB900DD52AF /* Data.swift in Sources */,
 				22CDC5542867A6AC009F4DA6 /* VisualizerView.swift in Sources */,
 				221114DA28671D60002FC98C /* TunerView.swift in Sources */,
 				221114C528671CCF002FC98C /* TunerApp.swift in Sources */,

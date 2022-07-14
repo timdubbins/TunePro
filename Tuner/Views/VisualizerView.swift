@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct VisualizerView: View {
+    @EnvironmentObject var tm: ThemeManager
+
     let vm: Tuner.Visualizer
 
     var body: some View {
         ZStack {
             ForEach((0..<3), id: \.self) { number in
                 WaveShape(vm.amplitude, vm.frequency, phase: vm.phase[number])
-                    .stroke(Color.pink)
+                    .stroke(tm.theme.vizualiser)
                     .opacity(vm.amplitude == 0 ? 0 : 0.8)
                     .animation(.linear(duration: 0.5), value: vm.amplitude)
             }

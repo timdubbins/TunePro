@@ -14,6 +14,7 @@ extension TunerView {
 
         private let audio: Audio
         private let tuner: Tuner
+        private let data: Data
 
         /// The data needed to update the tuner face.
         @Published var face = Tuner.Face()
@@ -29,9 +30,16 @@ extension TunerView {
 
         // MARK: - Methods
 
-        init() {
-            self.audio = Audio.sharedInstance
-            self.tuner = Tuner()
+        init(data: Data) {
+            audio = Audio.sharedInstance
+            tuner = Tuner()
+            self.data = data
+
+            if data.currentSymbol == Tuner.Symbol.sharp.rawValue {
+                tuner.symbol = .sharp
+            } else {
+                tuner.symbol = .flat
+            }
 
             cancellable = audio.$pitchTapData
                 .receive(on: DispatchQueue.main)
@@ -56,8 +64,10 @@ extension TunerView {
 
             if tuner.symbol == .sharp {
                 tuner.symbol = .flat
+                data.currentSymbol = Tuner.Symbol.flat.rawValue
             } else {
                 tuner.symbol = .sharp
+                data.currentSymbol = Tuner.Symbol.sharp.rawValue
             }
 
             stopPitchTap()

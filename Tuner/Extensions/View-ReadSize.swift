@@ -25,28 +25,3 @@ private struct SizePreferenceKey: PreferenceKey {
     static var defaultValue: CGSize = .zero
     static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
 }
-
-private struct ReadSize: View {
-    @State private var size = CGSize()
-
-    var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
-                .border(.yellow, width: 1)
-                .readSize {
-                    size = $0
-                }
-
-            Rectangle()
-                .foregroundColor(.yellow)
-                .frame(width: size.width, height: size.height)
-        }
-    }
-}
-
-struct ReadSizePreview: PreviewProvider {
-    static var previews: some View {
-        ReadSize()
-    }
-}

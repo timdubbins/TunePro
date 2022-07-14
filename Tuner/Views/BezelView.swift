@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct BezelView: View {
+    @EnvironmentObject var tm: ThemeManager
     let vm: Tuner.Bezel
 
     var body: some View {
         ZStack {
             WedgeShape(wedge: Wedge.topWedge)
-                .foregroundColor(vm.state == .tuned ? Color.green : Color.white)
+                .foregroundColor(vm.state == .tuned ? tm.theme.tuned : tm.theme.accent)
+
+            WedgeShape(wedge: Wedge.topWedge)
+                .stroke(tm.theme.accent)
 
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
-                    .stroke(Color.white)
+                    .foregroundColor(vm.state == .tuned ? tm.theme.tuned : getColor(wedgeNumber))
                     .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
 
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
-                    .foregroundColor(vm.state == .tuned ? Color.green : getColor(wedgeNumber))
+                    .stroke(tm.theme.accent)
                     .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
@@ -36,8 +40,8 @@ struct BezelView: View {
     /// Returns the color for the given wedge.
     private func getColor(_ wedgeNumber: Int) -> Color {
         let distance = vm.distance
-        let sharpColor = Color.yellow
-        let flatColor = Color.red
+        let sharpColor = tm.theme.sharp
+        let flatColor = tm.theme.flat
         let defaultColor = Color.clear
 
         switch wedgeNumber {

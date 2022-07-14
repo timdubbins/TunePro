@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TunerView: View {
-    @StateObject private var vm = ViewModel()
+    @StateObject private var vm: ViewModel
+    @EnvironmentObject var tm: ThemeManager
 
     var body: some View {
         ZStack {
@@ -19,17 +20,14 @@ struct TunerView: View {
         .padding(10)
         .background(
             Circle()
-                .padding(5)
-                .foregroundColor(Color(UIColor.systemGray6)))
+                .foregroundColor(tm.theme.face))
         .onTapGesture(perform: vm.symbolToggle)
         .onAppear(perform: vm.startPitchTap)
         .onDisappear(perform: vm.stopPitchTap)
     }
-}
 
-struct TunerViewPreview: PreviewProvider {
-    static var previews: some View {
-        TunerView()
-            .background(Color.black)
+    init(data: Data) {
+        let viewModel = ViewModel(data: data)
+        _vm = StateObject(wrappedValue: viewModel)
     }
 }

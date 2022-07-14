@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FaceView: View {
+    @EnvironmentObject var tm: ThemeManager
     let vm: Tuner.Face
 
     @State private var size = CGSize()
@@ -51,17 +52,10 @@ struct FaceView: View {
             front: { front },
             back: { back }
         )
-        .foregroundColor(.white)
+        .foregroundColor(tm.theme.accent)
         .animation(.linear, value: vm.showingSymbol)
         .readSize { size = $0 }
     }
 
     init(_ viewModel: Tuner.Face) { vm = viewModel }
-}
-
-struct FaceViewPreview: PreviewProvider {
-    static var previews: some View {
-        FaceView(Tuner.faceExample)
-            .background(Color(.black))
-    }
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SplashView: View {
+    @EnvironmentObject var tm: ThemeManager
     @State private var animation = Animation.notStarted
+    let data: Data
 
     enum Animation {
         case notStarted
@@ -20,18 +22,22 @@ struct SplashView: View {
         FlipView(isFlipped: animation == .finished) {
             ZStack {
                 Circle()
-                    .foregroundColor(Color(UIColor.systemGray6))
+                    .foregroundColor(tm.theme.face)
 
                 TuningForkShape()
                     .aspectRatio(contentMode: .fit)
                     .padding(50)
             }
             .opacity(animation == .started ? 1 : 0)
-            .padding(5)
 
         } back: {
-            TunerView()
+            TunerView(data: data)
         }
+        .padding(.top, 20)
+        .padding(5)
+        .background(tm.theme.background)
+        .ignoresSafeArea()
+
         .onAppear {
             withAnimation { animation = .started }
             DispatchQueue.main
@@ -40,10 +46,8 @@ struct SplashView: View {
                 }
         }
     }
-}
 
-struct SplashView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashView()
+    init(data: Data) {
+        self.data = data
     }
 }
