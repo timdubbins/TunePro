@@ -1,6 +1,6 @@
 //
 //  FaceView.swift
-//  Tuner
+//  TunePro
 //
 //  Created by Timothy Dubbins on 25/06/2022.
 //

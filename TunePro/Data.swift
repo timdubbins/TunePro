@@ -1,6 +1,6 @@
 //
 //  Data.swift
-//  Tuner
+//  TunePro
 //
 //  Created by Timothy Dubbins on 06/07/2022.
 //

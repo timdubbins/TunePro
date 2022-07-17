@@ -31,7 +31,7 @@ struct SplashView: View {
             .opacity(animation == .started ? 1 : 0)
 
         } back: {
-            TunerView(data: data)
+            TuneProView(data: data)
         }
         .padding(.top, 20)
         .padding(5)

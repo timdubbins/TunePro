@@ -1,6 +1,6 @@
 //
 //  BezelView.swift
-//  Tuner
+//  TunePro
 //
 //  Created by Timothy Dubbins on 26/06/2022.
 //
