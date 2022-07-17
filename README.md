@@ -19,10 +19,9 @@ A lightweight instrument tuner for iOS, written in Swift.
 If you want to build `Tuner` using Xcode, you can follow these instructions.
 
 ```fish
-git clone https://github.com/timdubbins/Tuner.git
-cd Tuner
-pod install
-open Tuner.xcworkspace
+git clone https://github.com/timdubbins/TunePro.git
+cd TunePro
+open TunePro.xcodeproj
 ```
 
 Happy coding!
