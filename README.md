@@ -24,6 +24,11 @@ cd TunePro
 open TunePro.xcodeproj
 ```
 
+If the package dependencies fail to load, reset the package caches.
+```fish
+Xcode File > Packages / Reset Pacakge Caches
+```
+
 Happy coding!
 
 
