@@ -23,7 +23,6 @@
 		223D9A732884BE7B0073CD27 /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5C2884BE7A0073CD27 /* TunerView.swift */; };
 		223D9A742884BE7B0073CD27 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5D2884BE7A0073CD27 /* Audio.swift */; };
 		223D9A752884BE7B0073CD27 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5E2884BE7B0073CD27 /* Data.swift */; };
-		223D9A772884BE7B0073CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A602884BE7B0073CD27 /* Assets.xcassets */; };
 		223D9A782884BE7B0073CD27 /* View-ReadSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A622884BE7B0073CD27 /* View-ReadSize.swift */; };
 		223D9A792884BE7B0073CD27 /* Comparable-Clamped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A632884BE7B0073CD27 /* Comparable-Clamped.swift */; };
 		223D9A7A2884BE7B0073CD27 /* CGPoint-Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A642884BE7B0073CD27 /* CGPoint-Rotate.swift */; };
@@ -35,6 +34,7 @@
 		223D9A802884BE7B0073CD27 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A6B2884BE7B0073CD27 /* ThemeManager.swift */; };
 		223D9A812884BE7B0073CD27 /* TunerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A6D2884BE7B0073CD27 /* TunerViewModel.swift */; };
 		223D9A852884C0AD0073CD27 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A842884C0AD0073CD27 /* Colors.xcassets */; };
+		223D9A892884C8970073CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A882884C8970073CD27 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		223D9A5C2884BE7A0073CD27 /* TunerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
 		223D9A5D2884BE7A0073CD27 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		223D9A5E2884BE7B0073CD27 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		223D9A602884BE7B0073CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Tuner/Tuner/Assets.xcassets; sourceTree = "<group>"; };
 		223D9A622884BE7B0073CD27 /* View-ReadSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View-ReadSize.swift"; sourceTree = "<group>"; };
 		223D9A632884BE7B0073CD27 /* Comparable-Clamped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable-Clamped.swift"; sourceTree = "<group>"; };
 		223D9A642884BE7B0073CD27 /* CGPoint-Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint-Rotate.swift"; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		223D9A6B2884BE7B0073CD27 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		223D9A6D2884BE7B0073CD27 /* TunerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerViewModel.swift; sourceTree = "<group>"; };
 		223D9A842884C0AD0073CD27 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		223D9A882884C8970073CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 				223D9A6C2884BE7B0073CD27 /* ViewModels */,
 				223D9A562884BE7A0073CD27 /* Views */,
 				223D9A612884BE7B0073CD27 /* Extensions */,
-				223D9A602884BE7B0073CD27 /* Assets.xcassets */,
+				223D9A882884C8970073CD27 /* Assets.xcassets */,
 				223D9A842884C0AD0073CD27 /* Colors.xcassets */,
 				223D9A282884BCBE0073CD27 /* Preview Content */,
 			);
@@ -334,8 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				223D9A852884C0AD0073CD27 /* Colors.xcassets in Resources */,
+				223D9A892884C8970073CD27 /* Assets.xcassets in Resources */,
 				223D9A2A2884BCBE0073CD27 /* Preview Assets.xcassets in Resources */,
-				223D9A772884BE7B0073CD27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
