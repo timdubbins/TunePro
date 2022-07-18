@@ -10,7 +10,6 @@ import SwiftUI
 struct SplashView: View {
     @EnvironmentObject var tm: ThemeManager
     @State private var animation = Animation.notStarted
-    let data: Data
 
     enum Animation {
         case notStarted
@@ -31,7 +30,7 @@ struct SplashView: View {
             .opacity(animation == .started ? 1 : 0)
 
         } back: {
-            TunerView(data: data)
+            TunerView()
         }
         .padding(.top, 20)
         .padding(5)
@@ -45,9 +44,5 @@ struct SplashView: View {
                     withAnimation { animation = .finished }
                 }
         }
-    }
-
-    init(data: Data) {
-        self.data = data
     }
 }

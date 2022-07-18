@@ -11,8 +11,7 @@ import SwiftUI
 @main
 struct TuneProApp: App {
     let audio = Audio.sharedInstance
-    let data = Data()
-    let theme: ThemeManager
+    let theme = ThemeManager.sharedInstance
 
     init() {
         #if DEBUG
@@ -20,13 +19,11 @@ struct TuneProApp: App {
             UIView.setAnimationsEnabled(false)
         }
         #endif
-
-        theme = ThemeManager(data: data)
     }
 
     var body: some Scene {
         WindowGroup {
-            SplashView(data: data)
+            SplashView()
                 .onTapGesture {
                     withAnimation(.linear(duration: 0.3)) {
                         theme.swapTheme()

@@ -12,9 +12,10 @@ extension TunerView {
     class ViewModel: ObservableObject {
         // MARK: - Properties
 
-        private let audio: Audio
+        private let audio = Audio.sharedInstance
+
         private let tuner: Tuner
-        private let data: Data
+        private let data = Data.sharedInstance
 
         /// The data needed to update the tuner face.
         @Published var face = Tuner.Face()
@@ -30,11 +31,9 @@ extension TunerView {
 
         // MARK: - Methods
 
-        init(data: Data) {
-            audio = Audio.sharedInstance
+        init() {
             tuner = Tuner()
-            self.data = data
-
+            
             if data.currentSymbol == Tuner.Symbol.sharp.rawValue {
                 tuner.symbol = .sharp
             } else {

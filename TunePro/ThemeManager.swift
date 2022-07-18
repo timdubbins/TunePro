@@ -8,7 +8,11 @@
 import SwiftUI
 
 class ThemeManager: ObservableObject {
-    let data: Data
+    private let data = Data.sharedInstance
+
+    static var sharedInstance: ThemeManager = {
+        ThemeManager()
+    }()
 
     @Published var theme = ThemeManager.defaultTheme {
         didSet {
@@ -16,9 +20,7 @@ class ThemeManager: ObservableObject {
         }
     }
 
-    init(data: Data) {
-        self.data = data
-
+    private init() {
         if data.currentTheme == ThemeManager.defaultTheme.name {
             theme = ThemeManager.defaultTheme
         } else {

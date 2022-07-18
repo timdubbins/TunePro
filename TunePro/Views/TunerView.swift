@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TunerView: View {
-    @StateObject private var vm: ViewModel
+    @StateObject private var vm = ViewModel()
     @EnvironmentObject var tm: ThemeManager
 
     var body: some View {
@@ -24,10 +24,5 @@ struct TunerView: View {
         .onTapGesture(perform: vm.symbolToggle)
         .onAppear(perform: vm.startPitchTap)
         .onDisappear(perform: vm.stopPitchTap)
-    }
-
-    init(data: Data) {
-        let viewModel = ViewModel(data: data)
-        _vm = StateObject(wrappedValue: viewModel)
     }
 }
