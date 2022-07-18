@@ -9,13 +9,7 @@ import SwiftUI
 
 struct SplashView: View {
     @EnvironmentObject var tm: ThemeManager
-    @State private var animation = Animation.notStarted
-
-    enum Animation {
-        case notStarted
-        case started
-        case finished
-    }
+    @State private var animation = Animation.State.notStarted
 
     var body: some View {
         FlipView(isFlipped: animation == .finished) {
