@@ -10,15 +10,15 @@ import SwiftUI
 struct VisualizerView: View {
     @EnvironmentObject var tm: ThemeManager
 
-    let vm: Tuner.Visualizer
+    let data: Tuner.Visualizer
 
     var body: some View {
         ZStack {
             ForEach((0..<3), id: \.self) { number in
-                WaveShape(vm.amplitude, vm.frequency, phase: vm.phase[number])
+                WaveShape(data.amplitude, data.frequency, phase: data.phase[number])
                     .stroke(tm.theme.vizualiser)
-                    .opacity(vm.amplitude == 0 ? 0 : 0.8)
-                    .animation(.linear(duration: 0.5), value: vm.amplitude)
+                    .opacity(data.amplitude == 0 ? 0 : 0.8)
+                    .animation(.linear(duration: 0.5), value: data.amplitude)
             }
         }
         .padding(11)
@@ -26,5 +26,5 @@ struct VisualizerView: View {
         .clipShape(Circle().inset(by: 22))
     }
 
-    init(_ viewModel: Tuner.Visualizer) { vm = viewModel }
+    init(_ data: Tuner.Visualizer) { self.data = data }
 }
