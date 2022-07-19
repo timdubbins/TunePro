@@ -1,6 +1,6 @@
 //
 //  FlipView.swift
-//  RiffCast
+//  TunePro
 //
 //  Created by Timothy Dubbins on 15/02/2022.
 //

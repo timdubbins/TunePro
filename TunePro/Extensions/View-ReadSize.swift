@@ -1,6 +1,6 @@
 //
 //  View - ReadSize.swift
-//  RiffCast
+//  TunePro
 //
 //  Original implementation: https://stackoverflow.com/questions/57577462/get-width-of-a-view-using-in-swiftui
 //

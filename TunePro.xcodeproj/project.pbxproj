@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2205E4FC2885B35E008DB453 /* Animation-State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FB2885B35E008DB453 /* Animation-State.swift */; };
 		2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */; };
+		2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */; };
 		223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A222884BCBC0073CD27 /* TuneProApp.swift */; };
 		223D9A2A2884BCBE0073CD27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */; };
 		223D9A342884BCBE0073CD27 /* TuneProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A332884BCBE0073CD27 /* TuneProTests.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		2205E4FB2885B35E008DB453 /* Animation-State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation-State.swift"; sourceTree = "<group>"; };
 		2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
+		2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewModelTests.swift; sourceTree = "<group>"; };
 		223D9A1F2884BCBC0073CD27 /* TunePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D9A222884BCBC0073CD27 /* TuneProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProApp.swift; sourceTree = "<group>"; };
 		223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				223D9A332884BCBE0073CD27 /* TuneProTests.swift */,
 				2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */,
+				2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */,
 			);
 			path = TuneProTests;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */,
 				223D9A342884BCBE0073CD27 /* TuneProTests.swift in Sources */,
 				2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */,
 			);

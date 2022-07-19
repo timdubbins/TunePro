@@ -1,6 +1,6 @@
 //
 //  SplashView.swift
-//  Tuner
+//  TunePro
 //
 //  Created by Timothy Dubbins on 03/07/2022.
 //

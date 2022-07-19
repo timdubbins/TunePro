@@ -12,10 +12,9 @@ extension TunerView {
     class ViewModel: ObservableObject {
         // MARK: - Properties
 
-        private let audio = Audio.sharedInstance
-
-        private let tuner: Tuner
-        private let data = Data.sharedInstance
+        let audio = Audio.sharedInstance
+        let data = Data.sharedInstance
+        let tuner: Tuner
 
         /// The data needed to update the tuner face.
         @Published var face = Tuner.Face()
@@ -82,7 +81,7 @@ extension TunerView {
         }
 
         /// Updates the model with data from the pitch tap.
-        private func updateTuner(_ amplitude: Float, _ frequency: Float) {
+        func updateTuner(_ amplitude: Float, _ frequency: Float) {
             // Reduce interference from background noise by setting a lower-bound
             // on amplitude. Without this the tuner can fluctuate randomly.
             guard amplitude > 0.05 else {
