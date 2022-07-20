@@ -8,23 +8,32 @@
 import XCTest
 
 class TuneProUITests: XCTestCase {
+    var app: XCUIApplication!
 
     override func setUpWithError() throws {
         continueAfterFailure = false
 
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launchArguments = ["enable-testing"]
         app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
     }
 
-    func testExample() throws {
-        let app = XCUIApplication()
-        app.buttons["swapTheme"].tap()
-        app.buttons["toggleSymbol"].firstMatch.tap()
+    func test_SwapThemeButtonExists() {
+        let button = app.buttons["swapTheme"]
+
+        button.tap()
+        XCTAssertTrue(button.exists)
+    }
+
+    func test_ToggleSymbolButtonExists() {
+        let button = app.buttons["toggleSymbol"].firstMatch
+
+        button.tap()
+        XCTAssertTrue(button.exists)
     }
 
     func testLaunchPerformance() throws {
