@@ -48,7 +48,7 @@ class Tuner {
     struct Visualizer {
         let phase: [Float] = [0, 2 * .pi / 3, 4 * .pi / 3]
 
-        /// The normalized amplitude, in range [0,1]
+        /// The clamped amplitude, in range [0,1]
         var amplitude: Float = 0.0
         /// A raw frequency value.
         var frequency: Float = 0.0
@@ -70,11 +70,8 @@ class Tuner {
         "B", "C", "D", "D", "E", "E", "F", "G", "G", "A", "A", "B", "B", "C"
     ]
 
-    /// The symbol to display.
+    /// The type of symbol currently selected.
     var symbol: Symbol = .sharp
-
-    /// The current state of the tuner.
-    var state: Tuner.State = .tuned
 }
 
 extension Tuner {

@@ -20,21 +20,6 @@ class TunerViewModelTests: XCTestCase {
         sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
     func test_TunerViewModel_SymbolToggledFromSharp_ShouldBeFlatSymbol() {
         // given
         sut.tuner.symbol = .sharp
@@ -104,7 +89,7 @@ class TunerViewModelTests: XCTestCase {
         XCTAssertEqual(sut.face.note, "B")
     }
 
-    func test_TunerViewModel_SymbolForFrequencyOneThreeEightHz_ShouldBeSharpSymbol() {
+    func test_TunerViewModel_SymbolForFrequency138Hz_ShouldBeFlatSymbol() {
         // given
         let frequency: Float = 138
         let amplitude: Float = 1
@@ -117,7 +102,7 @@ class TunerViewModelTests: XCTestCase {
         XCTAssertEqual(sut.face.symbol, Tuner.Symbol.flat.rawValue)
     }
 
-    func test_TunerViewModel_OctaveForFrequency250Hz_ShouldBeThree() {
+    func test_TunerViewModel_OctaveForFrequency250Hz_ShouldBeOctave3() {
         // given
         let frequency: Float = 250
         let amplitude: Float = 1
