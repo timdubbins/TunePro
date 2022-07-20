@@ -2,41 +2,28 @@
 //  SplashView.swift
 //  TunePro
 //
-//  Created by Timothy Dubbins on 03/07/2022.
+//  Created by Timothy Dubbins on 20/07/2022.
 //
 
 import SwiftUI
 
 struct SplashView: View {
     @EnvironmentObject var tm: ThemeManager
-    @State private var animation = Animation.State.notStarted
 
     var body: some View {
-        FlipView(isFlipped: animation == .finished) {
-            ZStack {
-                Circle()
-                    .foregroundColor(tm.theme.face)
+        ZStack {
+            Circle()
+                .foregroundColor(tm.theme.face)
 
-                TuningForkShape()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(50)
-            }
-            .opacity(animation == .started ? 1 : 0)
-
-        } back: {
-            TunerView()
+            TuningForkShape()
+                .aspectRatio(contentMode: .fit)
+                .padding(50)
         }
-        .padding(.top, 20)
-        .padding(5)
-        .background(tm.theme.background)
-        .ignoresSafeArea()
+    }
+}
 
-        .onAppear {
-            withAnimation { animation = .started }
-            DispatchQueue.main
-                .asyncAfter(deadline: .now() + 0.7) {
-                    withAnimation { animation = .finished }
-                }
-        }
+struct SplashView_Previews: PreviewProvider {
+    static var previews: some View {
+        SplashView()
     }
 }

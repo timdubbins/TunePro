@@ -23,12 +23,14 @@ struct TuneProApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SplashView()
-                .onTapGesture {
-                    withAnimation(.linear(duration: 0.3)) {
-                        theme.swapTheme()
-                    }
-                }
+            ContentView()
+//                .accessibility(addTraits: .isButton)
+//                .accessibilityIdentifier("swapTheme")
+//                .onTapGesture {
+//                    withAnimation(.linear(duration: 0.3)) {
+//                        theme.swapTheme()
+//                    }
+//                }
                 .environmentObject(theme)
                 .preferredColorScheme(.dark)
                 .onReceive(

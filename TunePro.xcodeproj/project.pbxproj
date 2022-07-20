@@ -10,6 +10,7 @@
 		2205E4FC2885B35E008DB453 /* Animation-State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FB2885B35E008DB453 /* Animation-State.swift */; };
 		2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */; };
 		2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */; };
+		2205E50228885443008DB453 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50128885443008DB453 /* SplashView.swift */; };
 		223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A222884BCBC0073CD27 /* TuneProApp.swift */; };
 		223D9A2A2884BCBE0073CD27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */; };
 		223D9A342884BCBE0073CD27 /* TuneProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A332884BCBE0073CD27 /* TuneProTests.swift */; };
@@ -19,7 +20,7 @@
 		223D9A522884BE030073CD27 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A512884BE030073CD27 /* AudioKitEX */; };
 		223D9A552884BE1B0073CD27 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A542884BE1B0073CD27 /* SoundpipeAudioKit */; };
 		223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A572884BE7A0073CD27 /* FlipView.swift */; };
-		223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* SplashView.swift */; };
+		223D9A6F2884BE7B0073CD27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* ContentView.swift */; };
 		223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A592884BE7A0073CD27 /* BezelView.swift */; };
 		223D9A712884BE7B0073CD27 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5A2884BE7A0073CD27 /* FaceView.swift */; };
 		223D9A722884BE7B0073CD27 /* VisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */; };
@@ -61,6 +62,7 @@
 		2205E4FB2885B35E008DB453 /* Animation-State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation-State.swift"; sourceTree = "<group>"; };
 		2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewModelTests.swift; sourceTree = "<group>"; };
+		2205E50128885443008DB453 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		223D9A1F2884BCBC0073CD27 /* TunePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D9A222884BCBC0073CD27 /* TuneProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProApp.swift; sourceTree = "<group>"; };
 		223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		223D9A3D2884BCBE0073CD27 /* TuneProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITests.swift; sourceTree = "<group>"; };
 		223D9A3F2884BCBE0073CD27 /* TuneProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		223D9A572884BE7A0073CD27 /* FlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
-		223D9A582884BE7A0073CD27 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		223D9A582884BE7A0073CD27 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		223D9A592884BE7A0073CD27 /* BezelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezelView.swift; sourceTree = "<group>"; };
 		223D9A5A2884BE7A0073CD27 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualizerView.swift; sourceTree = "<group>"; };
@@ -188,7 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				223D9A572884BE7A0073CD27 /* FlipView.swift */,
-				223D9A582884BE7A0073CD27 /* SplashView.swift */,
+				223D9A582884BE7A0073CD27 /* ContentView.swift */,
+				2205E50128885443008DB453 /* SplashView.swift */,
 				223D9A592884BE7A0073CD27 /* BezelView.swift */,
 				223D9A5A2884BE7A0073CD27 /* FaceView.swift */,
 				223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */,
@@ -380,13 +383,14 @@
 				223D9A812884BE7B0073CD27 /* TunerViewModel.swift in Sources */,
 				223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */,
 				223D9A7F2884BE7B0073CD27 /* WedgeShape.swift in Sources */,
-				223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */,
+				223D9A6F2884BE7B0073CD27 /* ContentView.swift in Sources */,
 				223D9A732884BE7B0073CD27 /* TunerView.swift in Sources */,
 				223D9A7E2884BE7B0073CD27 /* TunerModel.swift in Sources */,
 				223D9A722884BE7B0073CD27 /* VisualizerView.swift in Sources */,
 				223D9A802884BE7B0073CD27 /* ThemeManager.swift in Sources */,
 				223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */,
 				223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */,
+				2205E50228885443008DB453 /* SplashView.swift in Sources */,
 				2205E4FC2885B35E008DB453 /* Animation-State.swift in Sources */,
 				223D9A712884BE7B0073CD27 /* FaceView.swift in Sources */,
 			);
