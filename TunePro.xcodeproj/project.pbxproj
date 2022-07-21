@@ -11,6 +11,7 @@
 		2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */; };
 		2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */; };
 		2205E50228885443008DB453 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50128885443008DB453 /* SplashView.swift */; };
+		2205E50428894EFC008DB453 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50328894EFC008DB453 /* AssetTests.swift */; };
 		223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A222884BCBC0073CD27 /* TuneProApp.swift */; };
 		223D9A2A2884BCBE0073CD27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */; };
 		223D9A3E2884BCBE0073CD27 /* TuneProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A3D2884BCBE0073CD27 /* TuneProUITests.swift */; };
@@ -62,6 +63,7 @@
 		2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewModelTests.swift; sourceTree = "<group>"; };
 		2205E50128885443008DB453 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		2205E50328894EFC008DB453 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		223D9A1F2884BCBC0073CD27 /* TunePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D9A222884BCBC0073CD27 /* TuneProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProApp.swift; sourceTree = "<group>"; };
 		223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */,
+				2205E50328894EFC008DB453 /* AssetTests.swift */,
 				2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */,
 			);
 			path = TuneProTests;
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2205E50428894EFC008DB453 /* AssetTests.swift in Sources */,
 				2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */,
 				2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */,
 			);

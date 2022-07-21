@@ -36,6 +36,15 @@ class ThemeManager: ObservableObject {
         }
     }
 
+    static let colors = [
+        "Pitch",
+        "Babouche",
+        "Charlotte",
+        "Emerald",
+        "Tar",
+        "Wevet"
+    ]
+
     struct Theme: Equatable {
         var name: String
         var accent: Color
