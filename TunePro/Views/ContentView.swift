@@ -25,7 +25,9 @@ struct ContentView: View {
     }
 
     var body: some View {
-        FlipView(isFlipped: animation == .finished) {
+        FlipView(
+            axis: (x: -1, y: 1, z: 0),
+            isFlipped: animation == .finished) {
             SplashView()
                 .opacity(animation == .started ? 1 : 0)
 

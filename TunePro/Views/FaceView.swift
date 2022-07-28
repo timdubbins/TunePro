@@ -48,6 +48,7 @@ struct FaceView: View {
 
     var body: some View {
         FlipView(
+            axis: (x: -1, y: 1, z: 0),
             isFlipped: data.showingSymbol,
             front: { front },
             back: { back }

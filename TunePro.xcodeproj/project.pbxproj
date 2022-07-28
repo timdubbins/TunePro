@@ -208,12 +208,12 @@
 		223D9A612884BE7B0073CD27 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				223D9A622884BE7B0073CD27 /* View-ReadSize.swift */,
 				2205E4FB2885B35E008DB453 /* Animation-State.swift */,
-				223D9A632884BE7B0073CD27 /* Comparable-Clamped.swift */,
-				223D9A642884BE7B0073CD27 /* CGPoint-Rotate.swift */,
-				2205E5092889822F008DB453 /* Float-NormalizedRand.swift */,
 				223D9A652884BE7B0073CD27 /* CGPoint-Midpoint.swift */,
+				223D9A642884BE7B0073CD27 /* CGPoint-Rotate.swift */,
+				223D9A632884BE7B0073CD27 /* Comparable-Clamped.swift */,
+				2205E5092889822F008DB453 /* Float-NormalizedRand.swift */,
+				223D9A622884BE7B0073CD27 /* View-ReadSize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
