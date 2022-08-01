@@ -14,7 +14,7 @@ extension TunerView {
 
         let audio = Audio.sharedInstance
         let data = Data.sharedInstance
-        let tuner: Tuner
+        let tuner = Tuner()
 
         /// The data needed to update the tuner face.
         @Published var face = Tuner.Face()
@@ -31,8 +31,6 @@ extension TunerView {
         // MARK: - Methods
 
         init() {
-            tuner = Tuner()
-            
             if data.currentSymbol == Tuner.Symbol.sharp.rawValue {
                 tuner.symbol = .sharp
             } else {
