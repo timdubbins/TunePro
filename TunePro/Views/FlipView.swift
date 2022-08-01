@@ -2,6 +2,9 @@
 //  FlipView.swift
 //  TunePro
 //
+//  Original implementation of this code from
+//  https://www.hackingwithswift.com/plus/custom-swiftui-components/creating-a-flipview-to-provide-a-card-flip-effect
+//
 //  Created by Timothy Dubbins on 15/02/2022.
 //
 
@@ -27,7 +30,12 @@ struct FlipView<Front: View, Back: View>: View {
         }
     }
 
-    init(axis: (x: CGFloat, y: CGFloat, z: CGFloat), isFlipped: Bool = false, @ViewBuilder front: @escaping () -> Front, @ViewBuilder back: @escaping () -> Back) {
+    init(
+        axis: (x: CGFloat, y: CGFloat, z: CGFloat),
+        isFlipped: Bool = false,
+        @ViewBuilder front: @escaping () -> Front,
+        @ViewBuilder back: @escaping () -> Back
+    ) {
         self.axis = axis
         self.isFlipped = isFlipped
         self.front = front

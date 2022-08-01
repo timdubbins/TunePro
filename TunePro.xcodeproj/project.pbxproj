@@ -156,9 +156,7 @@
 				223D9A6C2884BE7B0073CD27 /* ViewModels */,
 				223D9A562884BE7A0073CD27 /* Views */,
 				223D9A612884BE7B0073CD27 /* Extensions */,
-				223D9A882884C8970073CD27 /* Assets.xcassets */,
-				223D9A842884C0AD0073CD27 /* Colors.xcassets */,
-				223D9A282884BCBE0073CD27 /* Preview Content */,
+				2271B80B2892D3D700E2C90F /* Content */,
 			);
 			path = TunePro;
 			sourceTree = "<group>";
@@ -235,6 +233,16 @@
 				223D9A6D2884BE7B0073CD27 /* TunerViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2271B80B2892D3D700E2C90F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				223D9A882884C8970073CD27 /* Assets.xcassets */,
+				223D9A842884C0AD0073CD27 /* Colors.xcassets */,
+				223D9A282884BCBE0073CD27 /* Preview Content */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
