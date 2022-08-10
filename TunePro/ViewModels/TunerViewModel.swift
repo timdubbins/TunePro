@@ -69,8 +69,8 @@ extension TunerView {
             stopPitchTap()
             visualizer.amplitude = 0
             bezel.state = .clear
-            face.symbol = tuner.symbol.rawValue
             face.showingSymbol = true
+            face.symbol = tuner.symbol.rawValue
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.startPitchTap()
