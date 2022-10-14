@@ -12,6 +12,9 @@
 
 Current version: 1.0.0 [[Download](https://github.com/timdubbins/Tuner/releases/tag/v1.0.0)]
 
+Download on the App Store [here](https://apps.apple.com/gb/app/tunepro/id1633074520)
+
+
 A lightweight instrument tuner for iOS, written in Swift.
 
 ## Building
