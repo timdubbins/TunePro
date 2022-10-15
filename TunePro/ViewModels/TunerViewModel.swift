@@ -60,10 +60,8 @@ extension TunerView {
 
             if tuner.symbol == .sharp {
                 tuner.symbol = .flat
-                data.currentSymbol = Tuner.Symbol.flat.rawValue
             } else {
                 tuner.symbol = .sharp
-                data.currentSymbol = Tuner.Symbol.sharp.rawValue
             }
 
             stopPitchTap()
@@ -71,6 +69,7 @@ extension TunerView {
             bezel.state = .clear
             face.showingSymbol = true
             face.symbol = tuner.symbol.rawValue
+            data.currentSymbol = tuner.symbol.rawValue
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.startPitchTap()
