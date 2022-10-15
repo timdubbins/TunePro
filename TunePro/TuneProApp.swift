@@ -14,11 +14,11 @@ struct TuneProApp: App {
     let theme = ThemeManager.sharedInstance
 
     init() {
-        #if DEBUG
+#if DEBUG
         if CommandLine.arguments.contains("enable-testing") {
             UIView.setAnimationsEnabled(false)
         }
-        #endif
+#endif
     }
 
     var body: some Scene {
@@ -39,14 +39,37 @@ struct TuneProApp: App {
                 .onReceive(
                     NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification),
                     perform: resume)
+                .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification),
+                           perform: handleInterruption)
         }
     }
 
-    func pause(_ note: Notification) {
-        audio.engine.stop()
+    private func handleInterruption(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt else { return }
+        guard let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
+
+        if type == .began {
+            pause(notification)
+        }
+        else if type == .ended {
+            guard let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
+
+            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+
+            if options.contains(.shouldResume) {
+                resume(notification)
+            }
+        }
     }
 
-    func resume(_ notification: Notification) {
+    private func pause(_ note: Notification) {
+        audio.engine.stop()
+        print("pause")
+    }
+
+    private func resume(_ notification: Notification) {
         try? audio.engine.start()
+        print("resume")
     }
 }
