@@ -11,12 +11,12 @@ import AVFoundation
 import SoundpipeAudioKit
 
 /// An environment singleton responsible for managing the audio engine.
-class Audio: ObservableObject {
+class AudioController: ObservableObject {
     // MARK: - Properties
 
     /// Creates the shared instance of the audio controller.
-    static var sharedInstance: Audio = {
-        let audio = Audio()
+    static var sharedInstance: AudioController = {
+        let audio = AudioController()
 
         do {
             try audio.engine.start()
@@ -114,5 +114,32 @@ class Audio: ObservableObject {
     func hasHeadsetMic(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
         // Filter the inputs to only those with a port type of headset microphones.
         return !routeDescription.inputs.filter({$0.portType == .headsetMic}).isEmpty
+    }
+
+    func handleInterruption(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt else { return }
+        guard let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
+
+        if type == .began {
+            pause(notification)
+        }
+        else if type == .ended {
+            guard let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
+
+            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+
+            if options.contains(.shouldResume) {
+                resume(notification)
+            }
+        }
+    }
+
+    func pause(_ note: Notification) {
+        engine.stop()
+    }
+
+    func resume(_ notification: Notification) {
+        try? engine.start()
     }
 }

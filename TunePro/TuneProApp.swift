@@ -10,7 +10,7 @@ import SwiftUI
 
 @main
 struct TuneProApp: App {
-    let audio = Audio.sharedInstance
+    let audio = AudioController.sharedInstance
     let theme = ThemeManager.sharedInstance
 
     init() {
@@ -35,41 +35,12 @@ struct TuneProApp: App {
                     // API so we can port to macOS, where scene phase cannot
                     // detect our app losing focus as of macOS 11.1.
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
-                    perform: pause)
+                    perform: audio.pause)
                 .onReceive(
                     NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification),
-                    perform: resume)
+                    perform: audio.resume)
                 .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification),
-                           perform: handleInterruption)
+                           perform: audio.handleInterruption)
         }
-    }
-
-    private func handleInterruption(_ notification: Notification) {
-        guard let userInfo = notification.userInfo else { return }
-        guard let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt else { return }
-        guard let type = AVAudioSession.InterruptionType(rawValue: typeValue) else { return }
-
-        if type == .began {
-            pause(notification)
-        }
-        else if type == .ended {
-            guard let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
-
-            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
-
-            if options.contains(.shouldResume) {
-                resume(notification)
-            }
-        }
-    }
-
-    private func pause(_ note: Notification) {
-        audio.engine.stop()
-        print("pause")
-    }
-
-    private func resume(_ notification: Notification) {
-        try? audio.engine.start()
-        print("resume")
     }
 }

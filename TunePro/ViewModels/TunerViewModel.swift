@@ -12,8 +12,8 @@ extension TunerView {
     class ViewModel: ObservableObject {
         // MARK: - Properties
 
-        let audio = Audio.sharedInstance
-        let data = Data.sharedInstance
+        let audio = AudioController.sharedInstance
+        let data = DataController.sharedInstance
         let tuner = Tuner()
 
         /// The data needed to update the tuner face.

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ThemeManager: ObservableObject {
-    private let data = Data.sharedInstance
+    private let data = DataController.sharedInstance
 
     static var sharedInstance: ThemeManager = {
         ThemeManager()
