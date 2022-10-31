@@ -13,13 +13,17 @@ struct TunerView: View {
 
     var background: some View {
         Circle()
-            .foregroundColor(tm.theme.face)
+            .foregroundColor(tm.theme.faceColor)
     }
 
     var body: some View {
         ZStack {
             BezelView(vm.bezel)
-            VisualizerView(vm.visualizer)
+
+            if vm.visualizerIsShowing {
+                VisualizerView(vm.visualizer)
+            }
+
             FaceView(vm.face)
         }
         .contentShape(Circle())
@@ -29,6 +33,19 @@ struct TunerView: View {
 
         .padding(10)
         .background(background)
+        .overlay(
+            Button {
+                withAnimation {
+                    vm.visualizerIsShowing.toggle()
+                }
+            } label: {
+                Image(systemName: vm.visualizerIsShowing ? "waveform.circle" : "circle")
+                    .rotationEffect(.radians(.pi * 0.5))
+                    .foregroundColor(tm.theme.accentColor)
+                    .font(.title3)
+                    .padding()
+            },
+            alignment: .topTrailing)
         
         .onAppear(perform: vm.startPitchTap)
         .onDisappear(perform: vm.stopPitchTap)
