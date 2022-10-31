@@ -16,7 +16,7 @@ struct VisualizerView: View {
         ZStack {
             ForEach((0..<3), id: \.self) { number in
                 WaveShape(data.amplitude, data.frequency, phase: data.phase[number])
-                    .stroke(tm.theme.vizualiser)
+                    .stroke(tm.theme.visualizerColor)
                     .opacity(data.amplitude == 0 ? 0 : 0.8)
                     .animation(.linear(duration: 0.5), value: data.amplitude)
             }

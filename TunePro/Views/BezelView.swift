@@ -14,21 +14,21 @@ struct BezelView: View {
     var body: some View {
         ZStack {
             WedgeShape(wedge: Wedge.topWedge)
-                .foregroundColor(data.state == .tuned ? tm.theme.tuned : tm.theme.accent)
+                .foregroundColor(data.state == .tuned ? tm.theme.tunedColor : tm.theme.accentColor)
 
             WedgeShape(wedge: Wedge.topWedge)
-                .stroke(tm.theme.accent)
+                .stroke(tm.theme.accentColor)
 
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
-                    .foregroundColor(data.state == .tuned ? tm.theme.tuned : getColor(wedgeNumber))
+                    .foregroundColor(data.state == .tuned ? tm.theme.tunedColor : getColor(wedgeNumber))
                     .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
 
             ForEach(0..<10) { wedgeNumber in
                 WedgeShape(wedge: Wedge.wedge)
-                    .stroke(tm.theme.accent)
+                    .stroke(tm.theme.accentColor)
                     .rotationEffect(.degrees(Double(wedgeNumber) * 31.5))
             }
             .rotationEffect(.degrees(296.8))
@@ -40,8 +40,8 @@ struct BezelView: View {
     /// Returns the color for the given wedge.
     private func getColor(_ wedgeNumber: Int) -> Color {
         let distance = data.distance
-        let sharpColor = tm.theme.sharp
-        let flatColor = tm.theme.flat
+        let sharpColor = tm.theme.sharpColor
+        let flatColor = tm.theme.flatColor
         let defaultColor = Color.clear
 
         switch wedgeNumber {

@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var animation = Animation.State.notStarted
 
     var background: some View {
-        tm.theme.background
+        tm.theme.backgroundColor
             .accessibilityAddTraits(.isButton)
             .accessibilityIdentifier("swapTheme")
         

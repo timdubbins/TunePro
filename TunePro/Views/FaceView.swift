@@ -53,7 +53,7 @@ struct FaceView: View {
             front: { front },
             back: { back }
         )
-        .foregroundColor(tm.theme.accent)
+        .foregroundColor(tm.theme.accentColor)
         .animation(.linear, value: data.showingSymbol)
         .readSize { size = $0 }
     }

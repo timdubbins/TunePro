@@ -21,7 +21,7 @@ class ThemeManagerTests: XCTestCase {
 
     func test_ThemeManager_ThemeName_ShouldBeEqualThemeNameInData() {
         // given
-        let name = sut.theme.name
+        let name = sut.theme.nameColor
         let data = Data.sharedInstance
 
         // then
@@ -58,7 +58,7 @@ class ThemeManagerTests: XCTestCase {
         sut.theme = ThemeManager.defaultTheme
 
         // then
-        XCTAssertEqual(data.currentTheme, sut.theme.name)
+        XCTAssertEqual(data.currentTheme, sut.theme.nameColor)
     }
 
     func test_ThemeManager_SettingThemeToRetroTheme_ShouldSetCurrentThemeInDataToRetroTheme() {
@@ -69,7 +69,7 @@ class ThemeManagerTests: XCTestCase {
         sut.theme = ThemeManager.retroTheme
 
         // then
-        XCTAssertEqual(data.currentTheme, sut.theme.name)
+        XCTAssertEqual(data.currentTheme, sut.theme.nameColor)
     }
 
 }

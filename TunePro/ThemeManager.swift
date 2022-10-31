@@ -16,12 +16,12 @@ class ThemeManager: ObservableObject {
 
     @Published var theme = ThemeManager.defaultTheme {
         didSet {
-            data.currentTheme = theme.name
+            data.currentTheme = theme.nameColor
         }
     }
 
     private init() {
-        if data.currentTheme == ThemeManager.defaultTheme.name {
+        if data.currentTheme == ThemeManager.defaultTheme.nameColor {
             theme = ThemeManager.defaultTheme
         } else {
             theme = ThemeManager.retroTheme
@@ -29,7 +29,7 @@ class ThemeManager: ObservableObject {
     }
 
     func swapTheme() {
-        if theme.name == ThemeManager.defaultTheme.name {
+        if theme.nameColor == ThemeManager.defaultTheme.nameColor {
             theme = ThemeManager.retroTheme
         } else {
             theme = ThemeManager.defaultTheme
@@ -46,37 +46,37 @@ class ThemeManager: ObservableObject {
     ]
 
     struct Theme: Equatable {
-        var name: String
-        var accent: Color
-        var background: Color
-        var sharp: Color
-        var flat: Color
-        var tuned: Color
-        var vizualiser: Color
-        var face: Color
+        var nameColor: String
+        var accentColor: Color
+        var backgroundColor: Color
+        var sharpColor: Color
+        var flatColor: Color
+        var tunedColor: Color
+        var visualizerColor: Color
+        var faceColor: Color
     }
 }
 
 extension ThemeManager {
     static let defaultTheme = Theme(
-        name: "Default",
-        accent: Color.white,
-        background: Color.black,
-        sharp: Color.yellow,
-        flat: Color.red,
-        tuned: Color.green,
-        vizualiser: Color.pink,
-        face: Color(.systemGray6)
+        nameColor: "Default",
+        accentColor: Color.white,
+        backgroundColor: Color.black,
+        sharpColor: Color.yellow,
+        flatColor: Color.red,
+        tunedColor: Color.green,
+        visualizerColor: Color.pink,
+        faceColor: Color(.systemGray6)
     )
 
     static let retroTheme = Theme(
-        name: "Retro",
-        accent: Color.black,
-        background: Color("Pitch"),
-        sharp: Color("Babouche"),
-        flat: Color("Charlotte"),
-        tuned: Color("Emerald"),
-        vizualiser: Color("Wevet"),
-        face: Color("Tar")
+        nameColor: "Retro",
+        accentColor: Color.black,
+        backgroundColor: Color("Pitch"),
+        sharpColor: Color("Babouche"),
+        flatColor: Color("Charlotte"),
+        tunedColor: Color("Emerald"),
+        visualizerColor: Color("Wevet"),
+        faceColor: Color("Tar")
     )
 }

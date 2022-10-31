@@ -13,7 +13,7 @@ struct SplashView: View {
     var body: some View {
         ZStack {
             Circle()
-                .foregroundColor(tm.theme.face)
+                .foregroundColor(tm.theme.faceColor)
 
             TuningForkShape()
                 .aspectRatio(contentMode: .fit)
