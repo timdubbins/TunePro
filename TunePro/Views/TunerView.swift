@@ -49,5 +49,11 @@ struct TunerView: View {
         
         .onAppear(perform: vm.startPitchTap)
         .onDisappear(perform: vm.stopPitchTap)
+        .alert(isPresented: $vm.showingAlert) {
+            Alert(
+                title: Text("TunePro needs microphone access to show the tuner"),
+                message: Text("You can turn on microphone access in Settings > TunePro")
+            )
+        }
     }
 }

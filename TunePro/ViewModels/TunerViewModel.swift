@@ -25,6 +25,8 @@ extension TunerView {
         /// The data needed to animate the tuner visualizer.
         @Published var visualizer = Tuner.Visualizer()
 
+        @Published var showingAlert = false
+
         @Published var visualizerIsShowing: Bool {
             didSet {
                 data.visualizerIsShowing = visualizerIsShowing
@@ -55,6 +57,11 @@ extension TunerView {
         }
 
         func startPitchTap() {
+            guard audio.microphoneState == .authorized else {
+                showingAlert = true
+                return
+            }
+
             audio.pitchTap.start()
         }
 

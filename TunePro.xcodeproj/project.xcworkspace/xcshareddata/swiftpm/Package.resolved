@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "pageview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/timdubbins/PageView.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "de446ad09d0a2588e9052c278887d06c1555b6e6"
+      }
+    },
+    {
       "identity" : "soundpipeaudiokit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AudioKit/SoundpipeAudioKit",

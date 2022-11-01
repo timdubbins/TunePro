@@ -10,7 +10,6 @@
 		2205E4FC2885B35E008DB453 /* Animation-State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FB2885B35E008DB453 /* Animation-State.swift */; };
 		2205E4FE2885CC50008DB453 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */; };
 		2205E50028870D0A008DB453 /* TunerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */; };
-		2205E50228885443008DB453 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50128885443008DB453 /* SplashView.swift */; };
 		2205E50428894EFC008DB453 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50328894EFC008DB453 /* AssetTests.swift */; };
 		2205E50828897902008DB453 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E50728897902008DB453 /* PerformanceTests.swift */; };
 		2205E50A2889822F008DB453 /* Float-NormalizedRand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205E5092889822F008DB453 /* Float-NormalizedRand.swift */; };
@@ -22,7 +21,7 @@
 		223D9A522884BE030073CD27 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A512884BE030073CD27 /* AudioKitEX */; };
 		223D9A552884BE1B0073CD27 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A542884BE1B0073CD27 /* SoundpipeAudioKit */; };
 		223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A572884BE7A0073CD27 /* FlipView.swift */; };
-		223D9A6F2884BE7B0073CD27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* ContentView.swift */; };
+		223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* SplashView.swift */; };
 		223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A592884BE7A0073CD27 /* BezelView.swift */; };
 		223D9A712884BE7B0073CD27 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5A2884BE7A0073CD27 /* FaceView.swift */; };
 		223D9A722884BE7B0073CD27 /* VisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */; };
@@ -41,6 +40,8 @@
 		223D9A812884BE7B0073CD27 /* TunerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A6D2884BE7B0073CD27 /* TunerViewModel.swift */; };
 		223D9A852884C0AD0073CD27 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A842884C0AD0073CD27 /* Colors.xcassets */; };
 		223D9A892884C8970073CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A882884C8970073CD27 /* Assets.xcassets */; };
+		229B3BCC29107C3000B8F343 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3BCB29107C3000B8F343 /* OnboardingView.swift */; };
+		229B3BCF29107C4D00B8F343 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 229B3BCE29107C4D00B8F343 /* PageView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,6 @@
 		2205E4FB2885B35E008DB453 /* Animation-State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation-State.swift"; sourceTree = "<group>"; };
 		2205E4FD2885CC50008DB453 /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		2205E4FF28870D0A008DB453 /* TunerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewModelTests.swift; sourceTree = "<group>"; };
-		2205E50128885443008DB453 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2205E50328894EFC008DB453 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		2205E50728897902008DB453 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		2205E5092889822F008DB453 /* Float-NormalizedRand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float-NormalizedRand.swift"; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		223D9A3D2884BCBE0073CD27 /* TuneProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITests.swift; sourceTree = "<group>"; };
 		223D9A3F2884BCBE0073CD27 /* TuneProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		223D9A572884BE7A0073CD27 /* FlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
-		223D9A582884BE7A0073CD27 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		223D9A582884BE7A0073CD27 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		223D9A592884BE7A0073CD27 /* BezelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezelView.swift; sourceTree = "<group>"; };
 		223D9A5A2884BE7A0073CD27 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualizerView.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 		223D9A6D2884BE7B0073CD27 /* TunerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerViewModel.swift; sourceTree = "<group>"; };
 		223D9A842884C0AD0073CD27 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		223D9A882884C8970073CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		229B3BCB29107C3000B8F343 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229B3BCF29107C4D00B8F343 /* PageView in Frameworks */,
 				223D9A4F2884BDF20073CD27 /* AudioKit in Frameworks */,
 				223D9A522884BE030073CD27 /* AudioKitEX in Frameworks */,
 				223D9A552884BE1B0073CD27 /* SoundpipeAudioKit in Frameworks */,
@@ -192,13 +194,13 @@
 		223D9A562884BE7A0073CD27 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				223D9A572884BE7A0073CD27 /* FlipView.swift */,
-				223D9A582884BE7A0073CD27 /* ContentView.swift */,
-				2205E50128885443008DB453 /* SplashView.swift */,
 				223D9A592884BE7A0073CD27 /* BezelView.swift */,
 				223D9A5A2884BE7A0073CD27 /* FaceView.swift */,
-				223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */,
+				223D9A572884BE7A0073CD27 /* FlipView.swift */,
+				229B3BCB29107C3000B8F343 /* OnboardingView.swift */,
+				223D9A582884BE7A0073CD27 /* SplashView.swift */,
 				223D9A5C2884BE7A0073CD27 /* TunerView.swift */,
+				223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,9 +221,9 @@
 		223D9A662884BE7B0073CD27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				223D9A672884BE7B0073CD27 /* WaveShape.swift */,
-				223D9A682884BE7B0073CD27 /* TuningForkShape.swift */,
 				223D9A692884BE7B0073CD27 /* TunerModel.swift */,
+				223D9A682884BE7B0073CD27 /* TuningForkShape.swift */,
+				223D9A672884BE7B0073CD27 /* WaveShape.swift */,
 				223D9A6A2884BE7B0073CD27 /* WedgeShape.swift */,
 			);
 			path = Models;
@@ -265,6 +267,7 @@
 				223D9A4E2884BDF20073CD27 /* AudioKit */,
 				223D9A512884BE030073CD27 /* AudioKitEX */,
 				223D9A542884BE1B0073CD27 /* SoundpipeAudioKit */,
+				229B3BCE29107C4D00B8F343 /* PageView */,
 			);
 			productName = TunePro;
 			productReference = 223D9A1F2884BCBC0073CD27 /* TunePro.app */;
@@ -342,6 +345,7 @@
 				223D9A4D2884BDF20073CD27 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				223D9A502884BE030073CD27 /* XCRemoteSwiftPackageReference "AudioKitEX" */,
 				223D9A532884BE1B0073CD27 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				229B3BCD29107C4D00B8F343 /* XCRemoteSwiftPackageReference "PageView" */,
 			);
 			productRefGroup = 223D9A202884BCBC0073CD27 /* Products */;
 			projectDirPath = "";
@@ -397,7 +401,7 @@
 				223D9A812884BE7B0073CD27 /* TunerViewModel.swift in Sources */,
 				223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */,
 				223D9A7F2884BE7B0073CD27 /* WedgeShape.swift in Sources */,
-				223D9A6F2884BE7B0073CD27 /* ContentView.swift in Sources */,
+				223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */,
 				2205E50A2889822F008DB453 /* Float-NormalizedRand.swift in Sources */,
 				223D9A732884BE7B0073CD27 /* TunerView.swift in Sources */,
 				223D9A7E2884BE7B0073CD27 /* TunerModel.swift in Sources */,
@@ -405,7 +409,7 @@
 				223D9A802884BE7B0073CD27 /* ThemeManager.swift in Sources */,
 				223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */,
 				223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */,
-				2205E50228885443008DB453 /* SplashView.swift in Sources */,
+				229B3BCC29107C3000B8F343 /* OnboardingView.swift in Sources */,
 				2205E4FC2885B35E008DB453 /* Animation-State.swift in Sources */,
 				223D9A712884BE7B0073CD27 /* FaceView.swift in Sources */,
 			);
@@ -584,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = timdubbins.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -614,7 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = timdubbins.Tuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -765,6 +769,14 @@
 				kind = branch;
 			};
 		};
+		229B3BCD29107C4D00B8F343 /* XCRemoteSwiftPackageReference "PageView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timdubbins/PageView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -782,6 +794,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 223D9A532884BE1B0073CD27 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
+		};
+		229B3BCE29107C4D00B8F343 /* PageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 229B3BCD29107C4D00B8F343 /* XCRemoteSwiftPackageReference "PageView" */;
+			productName = PageView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
