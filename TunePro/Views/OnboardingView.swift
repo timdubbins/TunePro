@@ -15,28 +15,62 @@ struct OnboardingView: View {
         PageView {
             pageOne
             pageTwo
-            pageThree
         }
+        .font(.system(size: 15, design: .monospaced))
     }
 
     var pageOne: some View {
-        Text("Thanks for choosing TunePro!")
+        VStack {
+            TuningForkShape()
+                .scaledToFit()
+                .frame(height: 200)
+                .padding(.bottom, 50)
+            Text("thanks for choosing")
+                .padding(.bottom, 1)
+            Text("TunePro!")
+                .padding()
+        }
+        .font(.system(size: 20, design: .monospaced))
+        .padding(.bottom, 50)
     }
 
     var pageTwo: some View {
-        Text("tune ...")
+        VStack(alignment: .center) {
+            Text("getting started")
+                .fontWeight(.semibold)
+                .padding(.top, 30)
+                .padding()
+                .font(.system(size: 30))
+            VStack(alignment: .leading, spacing: 30) {
+                Text("switch between ♯ or ♭ symbols by tapping the tuner")
+                Text("turn the visualizer on and off by tapping the \(Image("visualizer-symbol")) button")
+                Text("change the theme by tapping anywhere on the background")
+            }
+            .padding()
+            HStack {
+                Spacer()
+                continueButton
+                    .padding(.bottom, 40)
+                    .padding(.trailing, 50)
+                    .padding(.top, 70)
+            }
+        }
     }
 
-    var pageThree: some View {
-        Text("continue")
-            .font(.system(size: 15, design: .monospaced))
+    var continueButton: some View {
+        Text("ok!")
+            .fontWeight(.semibold)
+            .font(.system(size: 20))
+            .foregroundColor(.black)
             .padding()
-            .background(Color.pink)
+            .background(Color.white)
             .cornerRadius(30)
             .contentShape(Rectangle())
             .onTapGesture {
                 isFirstRun(false)
             }
+
+
     }
 
     init(isFirstRun: @escaping (Bool) -> Void) {
