@@ -68,6 +68,7 @@
 		2205E50328894EFC008DB453 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		2205E50728897902008DB453 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		2205E5092889822F008DB453 /* Float-NormalizedRand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float-NormalizedRand.swift"; sourceTree = "<group>"; };
+		2237E8D92914018100A778CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		223D9A1F2884BCBC0073CD27 /* TunePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223D9A222884BCBC0073CD27 /* TuneProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProApp.swift; sourceTree = "<group>"; };
 		223D9A292884BCBE0073CD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		223D9A212884BCBC0073CD27 /* TunePro */ = {
 			isa = PBXGroup;
 			children = (
+				2237E8D92914018100A778CC /* Info.plist */,
 				223D9A222884BCBC0073CD27 /* TuneProApp.swift */,
 				223D9A5D2884BE7A0073CD27 /* AudioController.swift */,
 				223D9A5E2884BE7B0073CD27 /* DataController.swift */,
@@ -578,11 +580,12 @@
 				DEVELOPMENT_TEAM = 9Q36UADFSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunePro/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app uses the microphone to detect the frequency and amplitude of sound. This data is used in the tuner display and is not stored or collected.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,11 +612,12 @@
 				DEVELOPMENT_TEAM = 9Q36UADFSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunePro/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app uses the microphone to detect the frequency and amplitude of sound. This data is used in the tuner display and is not stored or collected.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
