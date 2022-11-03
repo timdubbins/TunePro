@@ -12,11 +12,6 @@ import SoundpipeAudioKit
 
 /// An environment singleton responsible for managing the audio engine.
 class AudioController: ObservableObject {
-    enum MicrophoneState {
-        case authorized
-        case notAuthorized
-    }
-
     // MARK: - Properties
 
     /// Creates the shared instance of the audio controller.
@@ -63,8 +58,6 @@ class AudioController: ObservableObject {
 
     /// A node with output gain of zero.
     var silenceNode: Fader
-
-    var microphoneState: MicrophoneState = .notAuthorized
 
     // MARK: - Methods
 
@@ -142,12 +135,8 @@ class AudioController: ObservableObject {
         }
     }
 
-    func getMicrophonePermissionStatus() {
-        if AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized {
-            microphoneState = .authorized
-        } else {
-            microphoneState = .notAuthorized
-        }
+    var microphonePermissionStatus: Bool {
+        AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized
     }
 
     func pause(_ note: Notification) {

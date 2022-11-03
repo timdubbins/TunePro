@@ -57,14 +57,11 @@ extension TunerView {
         }
 
         func startPitchTap() {
-            audio.getMicrophonePermissionStatus()
-
-            guard audio.microphoneState == .authorized else {
+            if audio.microphonePermissionStatus {
+                audio.pitchTap.start()
+            } else {
                 showingAlert = true
-                return
             }
-
-            audio.pitchTap.start()
         }
 
         func stopPitchTap() {
