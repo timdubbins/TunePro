@@ -49,28 +49,23 @@ struct OnboardingView: View {
             .padding()
             HStack {
                 Spacer()
-                continueButton
+                Button {
+                    isFirstRun(false)
+                } label: {
+                    Text("ok!")
+                        .fontWeight(.semibold)
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(30)
+                        .contentShape(Rectangle())
+                }
                     .padding(.bottom, 40)
                     .padding(.trailing, 50)
                     .padding(.top, 70)
             }
         }
-    }
-
-    var continueButton: some View {
-        Text("ok!")
-            .fontWeight(.semibold)
-            .font(.system(size: 20))
-            .foregroundColor(.black)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(30)
-            .contentShape(Rectangle())
-            .onTapGesture {
-                isFirstRun(false)
-            }
-
-
     }
 
     init(isFirstRun: @escaping (Bool) -> Void) {
