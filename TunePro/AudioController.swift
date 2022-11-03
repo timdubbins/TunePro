@@ -86,6 +86,11 @@ class AudioController: ObservableObject {
         engine.output = silenceNode
     }
 
+    /// Returns a bool indicating whether the app has permission for recording audio or not.
+    var microphonePermissionStatus: Bool {
+        AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized
+    }
+
     /// Restarts the audio engine when the audio route changes.
     @objc func handleRouteChange(note: Notification) {
         engine.stop()
@@ -133,10 +138,6 @@ class AudioController: ObservableObject {
                 resume(notification)
             }
         }
-    }
-
-    var microphonePermissionStatus: Bool {
-        AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized
     }
 
     func pause(_ note: Notification) {
