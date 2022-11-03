@@ -16,13 +16,11 @@ struct TuneProApp: App {
     let theme = ThemeManager.sharedInstance
 
     init() {
-    #if DEBUG
+        #if DEBUG
         if CommandLine.arguments.contains("enable-testing") {
             UIView.setAnimationsEnabled(false)
         }
-    #endif
-
-        audio.getMicrophonePermissionStatus()
+        #endif
     }
 
     var body: some Scene {
@@ -51,6 +49,7 @@ struct TuneProApp: App {
                         perform: audio.resume)
                     .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification),
                                perform: audio.handleInterruption)
+//                    .onAppear(perform: audio.getMicrophonePermissionStatus)
             }
         }
     }
