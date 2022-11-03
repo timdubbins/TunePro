@@ -49,7 +49,6 @@ struct TuneProApp: App {
                         perform: audio.resume)
                     .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification),
                                perform: audio.handleInterruption)
-//                    .onAppear(perform: audio.getMicrophonePermissionStatus)
             }
         }
     }

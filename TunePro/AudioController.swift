@@ -38,9 +38,6 @@ class AudioController: ObservableObject {
     /// A tuple that holds the current amplitude and frequency of the pitch tap.
     @Published var pitchTapData: (amplitude: Float, frequency: Float) = (0, 0)
 
-    /// Whether or not a headphone jack is detected.
-    @Published var headphonesConnected: Bool = false
-
     /// Whether or not a headset microphone is detected.
     @Published var headsetMicConnected: Bool = false
 
@@ -102,18 +99,7 @@ class AudioController: ObservableObject {
             headsetMicConnected = false
         }
 
-        if hasHeadphones(in: currentRoute) {
-            headphonesConnected = true
-        } else {
-            headphonesConnected = false
-        }
-
         try? engine.start()
-    }
-
-    func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
-        // Filter the outputs to only those with a port type of headphones.
-        return !routeDescription.outputs.filter({$0.portType == .headphones}).isEmpty
     }
 
     func hasHeadsetMic(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
