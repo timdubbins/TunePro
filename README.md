@@ -10,12 +10,17 @@
   
 </div>
 
+A lightweight instrument tuner, written in Swift.
+
+<p align="left">
+    <img src="https://github.com/timdubbins/demo_content/blob/master/TunePro/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202022-11-03%20at%2017.48.13.png" alt="img1" width="250"/>
+    <img src="https://github.com/timdubbins/demo_content/blob/master/TunePro/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202022-11-03%20at%2017.49.01.png" alt="img2" width="250"/>
+  <img src="https://github.com/timdubbins/demo_content/blob/master/TunePro/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202022-11-03%20at%2017.52.28.png" alt="img3" width="250"/>
+</p>
+
 Current version: 1.0.0 [[Download](https://github.com/timdubbins/Tuner/releases/tag/v1.0.0)]
 
 Download on the App Store [here](https://apps.apple.com/gb/app/tunepro/id1633074520)
-
-
-A lightweight instrument tuner for iOS, written in Swift.
 
 ## Building
 
