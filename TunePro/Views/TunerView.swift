@@ -18,16 +18,13 @@ struct TunerView: View {
 
     var body: some View {
         ZStack {
-//            BezelView(vm.bezel)
-            BezelView(Tuner.example3.bezel)
+            BezelView(vm.bezel)
 
             if vm.visualizerIsShowing {
-//                VisualizerView(vm.visualizer)
-                VisualizerView(Tuner.example3.visualizer)
+                VisualizerView(vm.visualizer)
             }
 
-//            FaceView(vm.face)
-            FaceView(Tuner.example3.face)
+            FaceView(vm.face)
         }
         .contentShape(Circle())
         .accessibilityAddTraits(.isButton)
