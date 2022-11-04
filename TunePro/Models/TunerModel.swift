@@ -74,11 +74,41 @@ class Tuner {
     var symbol: Symbol = .sharp
 }
 
+/// Example data for testing and generating app screenshots.
 extension Tuner {
-    static let faceExample = Tuner.Face(
-        frequency: "261.6",
-        note: "C",
-        symbol: " ",
-        octave: "4"
+    struct Example {
+        let face: Face
+        let bezel: Bezel
+        let visualizer: Visualizer
+
+        init(face: Face, bezel: Bezel, visualizer: Visualizer) {
+            self.face = face
+            self.bezel = bezel
+            self.visualizer = visualizer
+        }
+    }
+    
+    static let example1 = Example(
+        face: Face(frequency: "181.0", note: "F", symbol: "♯", octave: "3", showingSymbol: false),
+        bezel: Bezel(state: .flat, distance: 0.6150144338607788),
+        visualizer: Visualizer(amplitude: 0.25, frequency: 181)
+    )
+
+    static let example2 = Example(
+        face: Face(frequency: "316.0", note: "D", symbol: "♯", octave: "4", showingSymbol: false),
+        bezel: Bezel(state: .sharp, distance: 0.2637840509414673),
+        visualizer: Visualizer(amplitude: 0.25, frequency: 316.0)
+    )
+
+    static let example3 = Example(
+        face: Face(frequency: "82.0", note: "E", symbol: " ", octave: "2", showingSymbol: false),
+        bezel: Bezel(state: .tuned, distance: 0.9124326705932617),
+        visualizer: Visualizer(amplitude: 0.15, frequency: 82.0)
+    )
+
+    static let example4 = Example(
+        face: Face(frequency: "135.0", note: "C", symbol: "♯", octave: "3", showingSymbol: false),
+        bezel: Bezel(state: .flat, distance: 0.5385608077049255),
+        visualizer: Visualizer(amplitude: 0.25, frequency: 135.0)
     )
 }
