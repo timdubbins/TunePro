@@ -42,7 +42,7 @@
 		223D9A892884C8970073CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A882884C8970073CD27 /* Assets.xcassets */; };
 		229B3BCC29107C3000B8F343 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3BCB29107C3000B8F343 /* OnboardingView.swift */; };
 		229B3BCF29107C4D00B8F343 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 229B3BCE29107C4D00B8F343 /* PageView */; };
-		22DA5D6729149628008DED8F /* UIDevice-Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA5D6629149628008DED8F /* UIDevice-Interface.swift */; };
+		22DA5D6729149628008DED8F /* UIDevice-IsPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA5D6629149628008DED8F /* UIDevice-IsPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,7 @@
 		223D9A842884C0AD0073CD27 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		223D9A882884C8970073CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229B3BCB29107C3000B8F343 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		22DA5D6629149628008DED8F /* UIDevice-Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Interface.swift"; sourceTree = "<group>"; };
+		22DA5D6629149628008DED8F /* UIDevice-IsPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-IsPad.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,11 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				2205E4FB2885B35E008DB453 /* Animation-State.swift */,
-				22DA5D6629149628008DED8F /* UIDevice-Interface.swift */,
 				223D9A652884BE7B0073CD27 /* CGPoint-Midpoint.swift */,
 				223D9A642884BE7B0073CD27 /* CGPoint-Rotate.swift */,
 				223D9A632884BE7B0073CD27 /* Comparable-Clamped.swift */,
 				2205E5092889822F008DB453 /* Float-NormalizedRand.swift */,
+				22DA5D6629149628008DED8F /* UIDevice-IsPad.swift */,
 				223D9A622884BE7B0073CD27 /* View-ReadSize.swift */,
 			);
 			path = Extensions;
@@ -399,7 +399,7 @@
 				223D9A7C2884BE7B0073CD27 /* WaveShape.swift in Sources */,
 				223D9A742884BE7B0073CD27 /* AudioController.swift in Sources */,
 				223D9A7A2884BE7B0073CD27 /* CGPoint-Rotate.swift in Sources */,
-				22DA5D6729149628008DED8F /* UIDevice-Interface.swift in Sources */,
+				22DA5D6729149628008DED8F /* UIDevice-IsPad.swift in Sources */,
 				223D9A752884BE7B0073CD27 /* DataController.swift in Sources */,
 				223D9A7B2884BE7B0073CD27 /* CGPoint-Midpoint.swift in Sources */,
 				223D9A792884BE7B0073CD27 /* Comparable-Clamped.swift in Sources */,
