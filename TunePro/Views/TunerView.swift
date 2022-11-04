@@ -18,13 +18,16 @@ struct TunerView: View {
 
     var body: some View {
         ZStack {
-            BezelView(vm.bezel)
+//            BezelView(vm.bezel)
+            BezelView(Tuner.example3.bezel)
 
             if vm.visualizerIsShowing {
-                VisualizerView(vm.visualizer)
+//                VisualizerView(vm.visualizer)
+                VisualizerView(Tuner.example3.visualizer)
             }
 
-            FaceView(vm.face)
+//            FaceView(vm.face)
+            FaceView(Tuner.example3.face)
         }
         .contentShape(Circle())
         .accessibilityAddTraits(.isButton)
@@ -46,6 +49,7 @@ struct TunerView: View {
                     .padding()
             },
             alignment: .topTrailing)
+        .padding(UIDevice.isPad ? 40 : 0)
         
         .onAppear(perform: vm.startPitchTap)
         .onDisappear(perform: vm.stopPitchTap)

@@ -16,37 +16,36 @@ struct OnboardingView: View {
             pageOne
             pageTwo
         }
-        .font(.system(size: 15, design: .monospaced))
+        .font(.system(size: UIDevice.isPad ? 30 : 15, design: .monospaced))
     }
 
     var pageOne: some View {
         VStack {
             TuningForkShape()
                 .scaledToFit()
-                .frame(height: 200)
+                .frame(height: UIDevice.isPad ? 400 : 200)
                 .padding(.bottom, 50)
             Text("thanks for choosing")
                 .padding(.bottom, 1)
             Text("TunePro!")
-                .padding()
+                .padding(.bottom, 30)
         }
-        .font(.system(size: 20, design: .monospaced))
-        .padding(.bottom, 50)
+        .font(.system(size: UIDevice.isPad ? 40 : 20, design: .monospaced))
     }
 
     var pageTwo: some View {
         VStack(alignment: .center) {
             Text("getting started")
                 .fontWeight(.semibold)
-                .padding(.top, 30)
-                .padding()
-                .font(.system(size: 30))
+                .padding(.top, 40)
+                .font(.system(size: UIDevice.isPad ? 60 : 30))
             VStack(alignment: .leading, spacing: 30) {
                 Text("switch between ♯ or ♭ symbols by tapping the tuner")
                 Text("turn the visualizer on and off by tapping the \(Image("visualizer-symbol")) button")
                 Text("change the theme by tapping anywhere on the background")
             }
-            .padding()
+            .padding(.top)
+            .padding(.horizontal, UIDevice.isPad ? 60 : 20)
             HStack {
                 Spacer()
                 Button {
@@ -54,16 +53,16 @@ struct OnboardingView: View {
                 } label: {
                     Text("ok!")
                         .fontWeight(.semibold)
-                        .font(.system(size: 20))
+                        .font(.system(size: UIDevice.isPad ? 40 : 20))
                         .foregroundColor(.black)
                         .padding()
                         .background(Color.white)
-                        .cornerRadius(30)
+                        .cornerRadius(UIDevice.isPad ? 60 : 30)
                         .contentShape(Rectangle())
                 }
                     .padding(.bottom, 40)
-                    .padding(.trailing, 50)
-                    .padding(.top, 70)
+                    .padding(.top, UIDevice.isPad ? 100 : 70)
+                    .padding(.trailing, UIDevice.isPad ? 110 : 50)
             }
         }
     }
