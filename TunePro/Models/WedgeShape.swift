@@ -67,7 +67,7 @@ struct WedgeGeometry {
         self.wedge = wedge
         center = CGPoint(x: rect.midX, y: rect.midY)
         let radius = min(rect.width, rect.height) * 0.5
-        innerRadius = radius - 17
+        innerRadius = radius - (UIDevice.isPad ? 35 : 17)
         outerRadius = radius
     }
 

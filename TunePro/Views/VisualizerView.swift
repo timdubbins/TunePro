@@ -21,9 +21,9 @@ struct VisualizerView: View {
                     .animation(.linear(duration: 0.5), value: data.amplitude)
             }
         }
-        .padding(11)
+        .padding(UIDevice.isPad ? 16 : 11)
         .rotationEffect(.degrees(90))
-        .clipShape(Circle().inset(by: 22))
+        .clipShape(Circle().inset(by: UIDevice.isPad ? 42 : 22))
     }
 
     init(_ data: Tuner.Visualizer) { self.data = data }

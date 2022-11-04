@@ -37,7 +37,7 @@ struct SplashView: View {
 
                     TuningForkShape()
                         .aspectRatio(contentMode: .fit)
-                        .padding(50)
+                        .padding(UIDevice.isPad ? 120 : 60)
                 }
                 .opacity(animation == .started ? 1 : 0)
 

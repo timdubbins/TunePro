@@ -42,7 +42,7 @@ struct TunerView: View {
                 Image(systemName: vm.visualizerIsShowing ? "waveform.circle" : "circle")
                     .rotationEffect(.radians(.pi * 0.5))
                     .foregroundColor(tm.theme.accentColor)
-                    .font(.title3)
+                    .font(UIDevice.isPad ? .largeTitle : .title3)
                     .padding()
             },
             alignment: .topTrailing)

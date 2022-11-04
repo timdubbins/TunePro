@@ -13,6 +13,8 @@ struct FaceView: View {
 
     @State private var size = CGSize()
 
+    let font: Font
+
     var front: some View {
         HStack {
             VStack(alignment: .trailing) {
@@ -23,6 +25,7 @@ struct FaceView: View {
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
+            .font(font)
 
             Text(data.note)
                 .fontWeight(.semibold)
@@ -35,6 +38,7 @@ struct FaceView: View {
 
                 Text(data.octave)
                     .fontWeight(.semibold)
+                    .font(font)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -58,5 +62,8 @@ struct FaceView: View {
         .readSize { size = $0 }
     }
 
-    init(_ data: Tuner.Face) { self.data = data }
+    init(_ data: Tuner.Face) {
+        self.data = data
+        font = UIDevice.isPad ? .title : .body
+    }
 }
