@@ -10,7 +10,7 @@
   
 </div>
 
-A lightweight instrument tuner, written in Swift.
+An iOS app for tuning instruments, built with SwiftUI and [AudioKit](https://github.com/AudioKit/AudioKit). 
 
 <p align="left">
     <img src="https://github.com/timdubbins/demo_content/blob/master/TunePro/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202022-11-03%20at%2017.48.13.png" alt="img1" width="250"/>
