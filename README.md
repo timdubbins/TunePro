@@ -18,9 +18,9 @@ An iOS app for tuning instruments, built with SwiftUI and [AudioKit](https://git
   <img src="https://github.com/timdubbins/demo_content/blob/master/TunePro/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202022-11-03%20at%2017.52.28.png" alt="img3" width="250"/>
 </p>
 
-Current version: 1.0.3 [[Download](https://github.com/timdubbins/Tuner/releases/tag/v1.0.3)]
+👨‍💻 Current version: 1.0.3 [[Download](https://github.com/timdubbins/Tuner/releases/tag/v1.0.3)].
 
-Download on the App Store [here](https://apps.apple.com/gb/app/tunepro/id1633074520)
+ Download on the App Store [here](https://apps.apple.com/gb/app/tunepro/id1633074520).
 
 ## Building
 
