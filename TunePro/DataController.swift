@@ -17,12 +17,14 @@ class DataController: ObservableObject {
     /// The theme that is used throughout the app.
     @Published var theme = Theme.original {
         didSet {
+            // store in user defaults
             currentTheme = theme.name
         }
     }
 
     static var sharedInstance: DataController = {
         let data = DataController()
+        // retrieve from user defaults
         data.theme = Theme.with(name: data.currentTheme)
         
         return data
@@ -32,13 +34,14 @@ class DataController: ObservableObject {
         appRunCount += 1
     }
 
+    /// Sets theme by cycling through available themes.
     func nextTheme() {
         theme = theme.next()
     }
 }
 
 struct Theme: Equatable {
-    /// An array of themes to use in the app.
+    /// An array of all themes used in the app.
     private static let themes: [Theme] = [Theme.original, Theme.retro]
 
     var name: String
