@@ -21,7 +21,7 @@ class ThemeManagerTests: XCTestCase {
 
     func test_ThemeManager_ThemeName_ShouldBeEqualThemeNameInData() {
         // given
-        let name = sut.theme.nameColor
+        let name = sut.theme.name
         let data = Data.sharedInstance
 
         // then

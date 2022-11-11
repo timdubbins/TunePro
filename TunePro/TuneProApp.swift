@@ -13,7 +13,6 @@ struct TuneProApp: App {
     @ObservedObject var data = DataController.sharedInstance
 
     let audio = AudioController.sharedInstance
-    let theme = ThemeManager.sharedInstance
 
     init() {
         #if DEBUG
@@ -29,10 +28,9 @@ struct TuneProApp: App {
                 OnboardingView() { newValue in
                     data.isFirstAppRun = newValue
                 }
-                .preferredColorScheme(.dark)
             } else {
                 RootView()
-                    .environmentObject(theme)
+                    .environmentObject(data)
                     .preferredColorScheme(.dark)
                     .onReceive(
                         NotificationCenter.default.publisher(for: AVAudioSession.routeChangeNotification),

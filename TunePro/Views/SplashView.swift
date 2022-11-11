@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SplashView: View {
-    @EnvironmentObject var tm: ThemeManager
+    @EnvironmentObject var data: DataController
 
     var body: some View {
         ZStack {
             Circle()
-                .foregroundColor(tm.theme.faceColor)
+                .foregroundColor(data.theme.faceColor)
 
             TuningForkShape()
                 .aspectRatio(contentMode: .fit)

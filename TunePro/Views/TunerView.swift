@@ -9,11 +9,10 @@ import SwiftUI
 
 struct TunerView: View {
     @StateObject private var vm = ViewModel()
-    @EnvironmentObject var tm: ThemeManager
 
     var background: some View {
         Circle()
-            .foregroundColor(tm.theme.faceColor)
+            .foregroundColor(vm.theme.faceColor)
     }
 
     var body: some View {
@@ -41,7 +40,7 @@ struct TunerView: View {
             } label: {
                 Image(systemName: vm.visualizerIsShowing ? "waveform.circle" : "circle")
                     .rotationEffect(.radians(.pi * 0.5))
-                    .foregroundColor(tm.theme.accentColor)
+                    .foregroundColor(vm.theme.accentColor)
                     .font(UIDevice.isPad ? .largeTitle : .title3)
                     .padding()
             },

@@ -9,20 +9,18 @@ import StoreKit
 import SwiftUI
 
 struct RootView: View {
-    @EnvironmentObject var tm: ThemeManager
+    @EnvironmentObject var data: DataController
 
     @State private var animation = Animation.State.notStarted
 
-    let data = DataController.sharedInstance
-
     var background: some View {
-        tm.theme.backgroundColor
+        data.theme.backgroundColor
             .accessibilityAddTraits(.isButton)
             .accessibilityIdentifier("swapTheme")
         
             .onTapGesture {
                 withAnimation(.linear(duration: 0.3)) {
-                    tm.swapTheme()
+                    data.nextTheme()
                 }
             }
     }

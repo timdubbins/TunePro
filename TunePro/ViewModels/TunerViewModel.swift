@@ -25,6 +25,8 @@ extension TunerView {
         /// The data needed to animate the tuner visualizer.
         @Published var visualizer = Tuner.Visualizer()
 
+        @Published var theme: Theme
+
         @Published var showingAlert = false
 
         @Published var visualizerIsShowing: Bool {
@@ -34,7 +36,10 @@ extension TunerView {
         }
 
         /// Cancellable for the pitch tap.
-        private var cancellable: AnyCancellable?
+        private var tunerCancellable: AnyCancellable?
+
+        /// Cancellable for the theme.
+        private var themeCancellable: AnyCancellable?
 
         // MARK: - Methods
 
@@ -46,13 +51,22 @@ extension TunerView {
             }
 
             visualizerIsShowing = data.visualizerIsShowing
+            theme = data.theme
 
-            cancellable = audio.$pitchTapData
+            tunerCancellable = audio.$pitchTapData
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] in
+                    guard let self = self else { return }
+                    
+                    self.updateTuner($0.amplitude, $0.frequency)
+                }
+
+            themeCancellable = data.$theme
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] in
                     guard let self = self else { return }
 
-                    self.updateTuner($0.amplitude, $0.frequency)
+                    self.theme = $0
                 }
         }
 

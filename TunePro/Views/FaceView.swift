@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FaceView: View {
-    @EnvironmentObject var tm: ThemeManager
-    let data: Tuner.Face
+    @EnvironmentObject var data: DataController
 
     @State private var size = CGSize()
 
+    let face: Tuner.Face
     let font: Font
 
     var front: some View {
         HStack {
             VStack(alignment: .trailing) {
-                Text(data.frequency)
+                Text(face.frequency)
                     .fontWeight(.semibold)
 
                 Text("Hz")
@@ -27,16 +27,16 @@ struct FaceView: View {
             .frame(maxWidth: .infinity, alignment: .trailing)
             .font(font)
 
-            Text(data.note)
+            Text(face.note)
                 .fontWeight(.semibold)
                 .font(.system(size: size.width * 1.4 / 3))
 
             VStack(alignment: .leading) {
-                Text(data.symbol)
+                Text(face.symbol)
                     .fontWeight(.semibold)
                     .font(.system(size: size.width * 1.2 / 5))
 
-                Text(data.octave)
+                Text(face.octave)
                     .fontWeight(.semibold)
                     .font(font)
             }
@@ -45,7 +45,7 @@ struct FaceView: View {
     }
 
     var back: some View {
-        Text(data.symbol)
+        Text(face.symbol)
             .fontWeight(.semibold)
             .font(.system(size: size.width * 1.4 / 3))
     }
@@ -53,17 +53,17 @@ struct FaceView: View {
     var body: some View {
         FlipView(
             axis: (x: -1, y: 1, z: 0),
-            isFlipped: data.showingSymbol,
+            isFlipped: face.showingSymbol,
             front: { front },
             back: { back }
         )
-        .foregroundColor(tm.theme.accentColor)
-        .animation(.linear, value: data.showingSymbol)
+        .foregroundColor(data.theme.accentColor)
+        .animation(.linear, value: face.showingSymbol)
         .readSize { size = $0 }
     }
 
-    init(_ data: Tuner.Face) {
-        self.data = data
+    init(_ face: Tuner.Face) {
+        self.face = face
         font = UIDevice.isPad ? .title : .body
     }
 }

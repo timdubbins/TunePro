@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct VisualizerView: View {
-    @EnvironmentObject var tm: ThemeManager
+    @EnvironmentObject var data: DataController
 
-    let data: Tuner.Visualizer
+    let visualizer: Tuner.Visualizer
 
     var body: some View {
         ZStack {
             ForEach((0..<3), id: \.self) { number in
-                WaveShape(data.amplitude, data.frequency, phase: data.phase[number])
-                    .stroke(tm.theme.visualizerColor)
-                    .opacity(data.amplitude == 0 ? 0 : 0.8)
-                    .animation(.linear(duration: 0.5), value: data.amplitude)
+                WaveShape(visualizer.amplitude, visualizer.frequency, phase: visualizer.phase[number])
+                    .stroke(data.theme.visualizerColor)
+                    .opacity(visualizer.amplitude == 0 ? 0 : 0.8)
+                    .animation(.linear(duration: 0.5), value: visualizer.amplitude)
             }
         }
         .padding(UIDevice.isPad ? 16 : 11)
@@ -26,5 +26,7 @@ struct VisualizerView: View {
         .clipShape(Circle().inset(by: UIDevice.isPad ? 42 : 22))
     }
 
-    init(_ data: Tuner.Visualizer) { self.data = data }
+    init(_ visualizer: Tuner.Visualizer) {
+        self.visualizer = visualizer
+    }
 }
