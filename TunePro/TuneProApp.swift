@@ -31,7 +31,7 @@ struct TuneProApp: App {
                 }
                 .preferredColorScheme(.dark)
             } else {
-                SplashView()
+                RootView()
                     .environmentObject(theme)
                     .preferredColorScheme(.dark)
                     .onReceive(

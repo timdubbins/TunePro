@@ -103,8 +103,8 @@ class AudioController: ObservableObject {
     }
 
     func hasHeadsetMic(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
-        // Filter the inputs to only those with a port type of headset microphones.
-        return !routeDescription.inputs.filter({$0.portType == .headsetMic}).isEmpty
+        // Filter the inputs to only those with a port type of headset microphone
+        !routeDescription.inputs.filter({$0.portType == .headsetMic}).isEmpty
     }
 
     func handleInterruption(_ notification: Notification) {

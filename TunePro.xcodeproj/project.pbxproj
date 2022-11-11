@@ -21,7 +21,7 @@
 		223D9A522884BE030073CD27 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A512884BE030073CD27 /* AudioKitEX */; };
 		223D9A552884BE1B0073CD27 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 223D9A542884BE1B0073CD27 /* SoundpipeAudioKit */; };
 		223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A572884BE7A0073CD27 /* FlipView.swift */; };
-		223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* SplashView.swift */; };
+		223D9A6F2884BE7B0073CD27 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A582884BE7A0073CD27 /* RootView.swift */; };
 		223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A592884BE7A0073CD27 /* BezelView.swift */; };
 		223D9A712884BE7B0073CD27 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5A2884BE7A0073CD27 /* FaceView.swift */; };
 		223D9A722884BE7B0073CD27 /* VisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */; };
@@ -42,6 +42,7 @@
 		223D9A892884C8970073CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223D9A882884C8970073CD27 /* Assets.xcassets */; };
 		229B3BCC29107C3000B8F343 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3BCB29107C3000B8F343 /* OnboardingView.swift */; };
 		229B3BCF29107C4D00B8F343 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 229B3BCE29107C4D00B8F343 /* PageView */; };
+		22CF4067291E5BAA0083B3C3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF4066291E5BAA0083B3C3 /* SplashView.swift */; };
 		22DA5D6729149628008DED8F /* UIDevice-IsPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA5D6629149628008DED8F /* UIDevice-IsPad.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +79,7 @@
 		223D9A3D2884BCBE0073CD27 /* TuneProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITests.swift; sourceTree = "<group>"; };
 		223D9A3F2884BCBE0073CD27 /* TuneProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneProUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		223D9A572884BE7A0073CD27 /* FlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
-		223D9A582884BE7A0073CD27 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		223D9A582884BE7A0073CD27 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		223D9A592884BE7A0073CD27 /* BezelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezelView.swift; sourceTree = "<group>"; };
 		223D9A5A2884BE7A0073CD27 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualizerView.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		223D9A842884C0AD0073CD27 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		223D9A882884C8970073CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229B3BCB29107C3000B8F343 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		22CF4066291E5BAA0083B3C3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		22DA5D6629149628008DED8F /* UIDevice-IsPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-IsPad.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,7 +204,8 @@
 				223D9A5A2884BE7A0073CD27 /* FaceView.swift */,
 				223D9A572884BE7A0073CD27 /* FlipView.swift */,
 				229B3BCB29107C3000B8F343 /* OnboardingView.swift */,
-				223D9A582884BE7A0073CD27 /* SplashView.swift */,
+				223D9A582884BE7A0073CD27 /* RootView.swift */,
+				22CF4066291E5BAA0083B3C3 /* SplashView.swift */,
 				223D9A5C2884BE7A0073CD27 /* TunerView.swift */,
 				223D9A5B2884BE7A0073CD27 /* VisualizerView.swift */,
 			);
@@ -407,11 +410,12 @@
 				223D9A812884BE7B0073CD27 /* TunerViewModel.swift in Sources */,
 				223D9A702884BE7B0073CD27 /* BezelView.swift in Sources */,
 				223D9A7F2884BE7B0073CD27 /* WedgeShape.swift in Sources */,
-				223D9A6F2884BE7B0073CD27 /* SplashView.swift in Sources */,
+				223D9A6F2884BE7B0073CD27 /* RootView.swift in Sources */,
 				2205E50A2889822F008DB453 /* Float-NormalizedRand.swift in Sources */,
 				223D9A732884BE7B0073CD27 /* TunerView.swift in Sources */,
 				223D9A7E2884BE7B0073CD27 /* TunerModel.swift in Sources */,
 				223D9A722884BE7B0073CD27 /* VisualizerView.swift in Sources */,
+				22CF4067291E5BAA0083B3C3 /* SplashView.swift in Sources */,
 				223D9A802884BE7B0073CD27 /* ThemeManager.swift in Sources */,
 				223D9A6E2884BE7B0073CD27 /* FlipView.swift in Sources */,
 				223D9A232884BCBC0073CD27 /* TuneProApp.swift in Sources */,
