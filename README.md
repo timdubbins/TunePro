@@ -24,7 +24,7 @@ An iOS app for tuning instruments, built with SwiftUI and [AudioKit](https://git
 
 ## Building
 
-If you want to build `Tuner` using Xcode, you can follow these instructions.
+If you want to build `TunePro` using Xcode, you can follow these instructions.
 
 ```fish
 git clone https://github.com/timdubbins/TunePro.git
@@ -42,4 +42,4 @@ Happy coding!
 
 ## License
 
-**Tuner** is available under the MIT license. See the [LICENSE](https://github.com/timdubbins/Tuner/blob/master/LICENSE.md) file for more info.
+**TunePro** is available under the MIT license. See the [LICENSE](https://github.com/timdubbins/Tuner/blob/master/LICENSE.md) file for more info.
