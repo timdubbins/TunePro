@@ -40,10 +40,6 @@ Xcode File > Packages > Reset Pacakge Caches
 Happy coding!
 
 
-## Author
-
-Timothy Dubbins, timdubbins@gmail.com
-
 ## License
 
 **Tuner** is available under the MIT license. See the [LICENSE](https://github.com/timdubbins/Tuner/blob/master/LICENSE.md) file for more info.
